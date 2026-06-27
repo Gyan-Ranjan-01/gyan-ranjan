@@ -1,0 +1,1096 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Gyan Ranjan | Builder • Engineer • Problem Solver</title>
+  <meta name="description" content="Personal portfolio of Gyan Ranjan. Building AI-powered applications, backend architectures, and intelligent software to solve real-world problems. IT student at IIEST Shibpur.">
+  <meta name="keywords" content="Gyan Ranjan, IIEST Shibpur, AI Engineer, Software Engineer, Backend Developer, RAG, RepoMind, DocOnCall, FastAPI, Qdrant">
+  
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://gyanranjan.dev">
+  <meta property="og:title" content="Gyan Ranjan | Builder • Engineer • Problem Solver">
+  <meta property="og:description" content="Building production-ready AI products, backend architectures, and developer tools. Explore selected engineering case studies.">
+  <meta property="og:image" content="images/avatar.png">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://gyanranjan.dev">
+  <meta property="twitter:title" content="Gyan Ranjan | Builder • Engineer • Problem Solver">
+  <meta property="twitter:description" content="Building production-ready AI products, backend architectures, and developer tools.">
+  <meta property="twitter:image" content="images/avatar.png">
+
+  <link rel="icon" href="images/avatar.png" type="image/png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <div class="container flex items-center justify-between">
+      <a href="#" class="nav-logo">gyan.ranjan<span style="color: var(--accent);">()</span></a>
+      
+      <!-- Desktop nav links -->
+      <nav class="nav-links">
+        <a href="#work" class="nav-link">Work</a>
+        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#contact" class="nav-link">Contact</a>
+        <a href="resume.pdf" class="btn btn-secondary nav-btn" target="_blank" rel="noopener noreferrer">
+          Resume
+          <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+        </a>
+      </nav>
+
+      <!-- Mobile hamburger trigger -->
+      <button type="button" id="burger-btn" class="burger-btn" aria-label="Toggle Navigation Menu">
+        <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+        <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- MOBILE MENU PANEL -->
+  <div id="mobile-nav-panel" class="mobile-nav-panel">
+    <a href="#work" class="mobile-nav-link">Work</a>
+    <a href="#journey" class="mobile-nav-link">Journey</a>
+    <a href="#about" class="mobile-nav-link">About</a>
+    <a href="#contact" class="mobile-nav-link">Contact</a>
+    <hr style="border: none; border-top: 1px solid var(--border); margin: 0.25rem 0;">
+    <a href="resume.pdf" class="btn btn-primary" style="justify-content: center;" target="_blank" rel="noopener noreferrer">
+      Resume
+      <svg class="icon" style="margin-left: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+    </a>
+  </div>
+
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" style="border-top: none;">
+      <div class="bg-grid-lines"></div>
+      <div class="container relative">
+        <div class="hero-grid">
+          
+          <!-- Bio block -->
+          <div class="hero-text-block reveal-on-scroll">
+            <div class="hero-role">Builder • Engineer • Problem Solver</div>
+            <h1 class="hero-title">Gyan Ranjan</h1>
+            <p class="hero-tagline">Building AI products that solve real-world problems.</p>
+            <p class="hero-desc">Currently pursuing B.Tech in Information Technology at IIEST Shibpur. I enjoy building AI-powered applications, backend systems, and intelligent software that solve real-world problems.</p>
+            
+            <div class="flex flex-wrap gap-3">
+              <a href="#work" class="btn btn-primary">
+                Explore My Work
+                <svg class="icon" style="margin-left: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+              </a>
+              <a href="resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.375rem; color: var(--secondary);" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                View Resume
+              </a>
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              </a>
+              <a href="https://linkedin.com/in/gyan-ranjan" class="btn btn-secondary" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Avatar block -->
+          <div class="hero-avatar-block reveal-on-scroll delay-150">
+            <div class="avatar-wrapper">
+              <div class="avatar-blur"></div>
+              <div class="avatar-card">
+                <img src="images/avatar.png" alt="Gyan Ranjan Profile Image" class="avatar-img" loading="eager">
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- SELECTED WORK / CASE STUDIES -->
+    <section id="work" class="bg-white scroll-mt-12">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <div class="section-badge">Selected Work</div>
+          <h2 class="section-title">Engineering Case Studies</h2>
+          <p class="section-subtitle">A detailed breakdown of product architecture, key design patterns, and engineering decisions.</p>
+        </div>
+
+        <div class="case-studies-list" style="display: flex; flex-direction: column; gap: 6rem;">
+
+          <!-- RepoMind Case Study -->
+          <div class="case-study reveal-on-scroll">
+            <div class="case-study-header">
+              <div>
+                <h3 class="case-study-title">RepoMind</h3>
+                <p class="case-study-subtitle">AI-Powered Repository Analysis Platform</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <a href="https://github.com/Gyan-Ranjan-01/RepoMind" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  View Source
+                </a>
+                <a href="https://repomind-eta.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                  Try Live Demo
+                  <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Case Study layout Grid -->
+            <div class="case-study-grid">
+              <div class="case-study-left">
+                <p class="case-study-desc">RepoMind is a developer-focused platform that enables engineering teams to instantly map, explain, and query unfamiliar codebases using Retrieval-Augmented Generation (RAG).</p>
+                
+                <div class="problem-solution-cards">
+                  <div class="ps-card">
+                    <div class="ps-badge ps-badge-problem">The Problem</div>
+                    <p class="ps-desc">Software engineers spend up to 70% of their time reading and understanding code rather than writing it. Static search tools fail to capture the logical flow, design patterns, and architectural context of unfamiliar repositories, causing significant friction in developer onboarding and task resolution.</p>
+                  </div>
+                  <div class="ps-card">
+                    <div class="ps-badge ps-badge-solution">The Solution</div>
+                    <p class="ps-desc">A scalable RAG system that ingests entire GitHub repositories, parses code structures into a custom Abstract Syntax Tree (AST) tree, stores semantic code chunk embeddings in a persistent Qdrant vector database, and processes queries using a multi-query expansion pipeline with Gemini embeddings to generate contextual, accurate architectural explanations.</p>
+                  </div>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                  <h4 style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--foreground);">Key Features</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge">Retrieval-Augmented Generation</span>
+                    <span class="badge">Semantic Code Search</span>
+                    <span class="badge">JWT Authentication</span>
+                    <span class="badge">Persistent Vector Database</span>
+                    <span class="badge">REST API Architecture</span>
+                    <span class="badge">Production Deployment</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slider Carousel block -->
+              <div class="case-study-right">
+                <div id="repomind-carousel" class="carousel-container">
+                  <div class="carousel-viewport">
+                    <div class="carousel-slide active">
+                      <img src="images/repomind/Screenshot (2134).png" alt="RepoMind Ingestion Interface" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/repomind/Screenshot (2135).png" alt="RepoMind Database Status and Metrics" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/repomind/Screenshot (2136).png" alt="RepoMind Analysis Chat Window" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/repomind/Screenshot (2137).png" alt="RepoMind Advanced Configurations" class="carousel-img" loading="lazy">
+                    </div>
+                  </div>
+                  <!-- Controls -->
+                  <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                  </button>
+                  <button type="button" class="carousel-btn carousel-btn-next" aria-label="Next Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                </div>
+                <div class="carousel-indicators">
+                  <button type="button" class="carousel-dot active" aria-label="Go to slide 1"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 2"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 3"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 4"></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="diagram-container">
+              <div class="diagram-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-10 5 10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+                Architecture Blueprint
+              </div>
+              <div class="diagram-box">
+                <div class="diagram-grid">
+                  <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">📁 GitHub Ingest</span>
+                      Repo link fetched via GitHub APIs
+                    </div>
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">💬 Developer Prompt</span>
+                      Question on repo structure or API
+                    </div>
+                  </div>
+                  <div class="diagram-conn-column">
+                    <div class="diagram-node diagram-node-accent" style="width: 100%;">
+                      <span class="diagram-node-title diagram-node-accent-title">⚡ FastAPI Core</span>
+                      * AST Code Parser / Chunker<br>
+                      * Query expansion LLM
+                    </div>
+                    <div class="diagram-line-vert"></div>
+                    <div class="diagram-node" style="width: 100%;">
+                      <span class="diagram-node-title">🧩 Context Injector</span>
+                      Assembles prompts with vector match data
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">🗄️ Qdrant DB</span>
+                      Vector embedding persistence
+                    </div>
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">🤖 Gemini Engine</span>
+                      Generates natural language code analysis
+                    </div>
+                  </div>
+                </div>
+                <div class="diagram-footer">
+                  <span>Ingestion Flow: Ingest ➔ FastAPI Parser ➔ Qdrant DB</span>
+                  <span>•</span>
+                  <span>Query Flow: Query ➔ FastAPI (Gemini Embed) ➔ Qdrant Retrieval ➔ Gemini LLM Response</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decisions Table -->
+            <div style="margin-bottom: 2.5rem;">
+              <div class="diagram-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
+                Engineering Decisions & Trade-Offs
+              </div>
+              <div class="decision-table-wrapper">
+                <div class="decision-table-scroll">
+                  <table class="decision-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 20%;">Decision</th>
+                        <th style="width: 20%;">Chosen Tech</th>
+                        <th style="width: 20%;">Alternatives</th>
+                        <th style="width: 40%;">Trade-offs & Rationale</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="decision-tech-name">AI Backend Engine</td>
+                        <td><span class="decision-choice-badge">FastAPI (Python)</span></td>
+                        <td class="decision-alternatives">Node.js / Express, Go</td>
+                        <td>
+                          <div class="decision-details-p"><strong>Trade-off:</strong> Python has higher memory usage and execution latency compared to Go, but provides native integration with ML libraries.</div>
+                          <div class="decision-details-p"><strong>Benefits:</strong> Seamless interoperability with Python's rich AI ecosystem (LangChain, Hugging Face, NumPy) and auto-generating OpenAPI documentation.</div>
+                          <div class="decision-details-p"><strong>Limitations:</strong> Single-threaded event loop requires delegating parsing jobs to background worker processes to prevent blocking.</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="decision-tech-name">Vector Database</td>
+                        <td><span class="decision-choice-badge">Qdrant</span></td>
+                        <td class="decision-alternatives">FAISS, Pgvector</td>
+                        <td>
+                          <div class="decision-details-p"><strong>Trade-off:</strong> FAISS is in-memory only and lacks metadata filtering; Pgvector requires complex SQL schema setups for dynamically structured vector queries.</div>
+                          <div class="decision-details-p"><strong>Benefits:</strong> Provides native REST/gRPC interfaces, horizontal scaling, payload filtering, and high search performance for code semantic embeddings.</div>
+                          <div class="decision-details-p"><strong>Limitations:</strong> Requires deploying and maintaining an independent database cluster, adding infrastructure overhead.</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="decision-tech-name">Language Models & Embeddings</td>
+                        <td><span class="decision-choice-badge">Gemini 1.5 Flash</span></td>
+                        <td class="decision-alternatives">OpenAI GPT-4o, Claude 3.5 Sonnet</td>
+                        <td>
+                          <div class="decision-details-p"><strong>Trade-off:</strong> Gemini has slightly less code-generation reasoning precision than Claude 3.5 Sonnet, but offers drastically lower costs.</div>
+                          <div class="decision-details-p"><strong>Benefits:</strong> Massive 1M+ token context window permits ingestion of massive codebases without fragmenting memory state.</div>
+                          <div class="decision-details-p"><strong>Limitations:</strong> API access can suffer from rate-limits on standard tiers, requiring client-side throttling.</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Challenges Grid -->
+            <div class="challenges-grid">
+              <div class="challenge-card">
+                <div class="challenge-card-title challenge-card-title-red">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  Key Challenge
+                </div>
+                <p class="challenge-card-desc">A major challenge was naive text chunking breaking code syntax. Standard split-by-character algorithms sliced functions in half, stripping import contexts and making generated embeddings useless. To resolve this, I implemented an AST-aware custom chunker. It identifies logical blocks (classes, functions, methods) and appends parent file headers, directory trees, and dependencies to each chunk prior to embedding.</p>
+              </div>
+              <div class="challenge-card">
+                <div class="challenge-card-title challenge-card-title-green">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  Lesson Learned
+                </div>
+                <p class="challenge-card-desc">Through RepoMind, I realized that RAG quality depends entirely on chunk preparation and structural metadata rather than just LLM power. A clean, syntax-aware database yield increases code-matching relevance by over 40%.</p>
+              </div>
+              <div class="challenge-card">
+                <div class="challenge-card-title challenge-card-title-blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
+                  Future Outlook
+                </div>
+                <ul class="challenge-card-desc challenge-list">
+                  <li>Implement AST-based cross-file dependency graph indexing to resolve import networks.</li>
+                  <li>Add support for real-time repository syncing using GitHub Webhooks.</li>
+                  <li>Integrate local LLMs (Ollama) to allow offline codebase analysis.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Tech badges -->
+            <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built with:</span>
+              <span class="badge">Python</span>
+              <span class="badge">FastAPI</span>
+              <span class="badge">MongoDB</span>
+              <span class="badge">Gemini API</span>
+              <span class="badge">Qdrant</span>
+              <span class="badge">Docker</span>
+              <span class="badge">JWT</span>
+              <span class="badge">GitHub API</span>
+            </div>
+          </div>
+
+          <!-- DocOnCall Case Study -->
+          <div class="case-study reveal-on-scroll">
+            <div class="case-study-header">
+              <div>
+                <h3 class="case-study-title">DocOnCall</h3>
+                <p class="case-study-subtitle">AI-Powered Healthcare Assistance Platform</p>
+              </div>
+              <div class="flex items-center gap-3">
+                <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                  <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                  View Source
+                </a>
+              </div>
+            </div>
+
+            <!-- Case Study layout Grid -->
+            <div class="case-study-grid">
+              <div class="case-study-left">
+                <p class="case-study-desc">DocOnCall is an intelligent medical companion that bridges the gap between patient symptoms, medical reports, and clinical consultation.</p>
+                
+                <div class="problem-solution-cards">
+                  <div class="ps-card">
+                    <div class="ps-badge ps-badge-problem">The Problem</div>
+                    <p class="ps-desc">Patients frequently struggle to interpret technical medical reports, leading to anxiety or improper self-medication. Additionally, doctors spend valuable consultation minutes asking standard screening questions that could be automated during pre-consultation.</p>
+                  </div>
+                  <div class="ps-card">
+                    <div class="ps-badge ps-badge-solution">The Solution</div>
+                    <p class="ps-desc">A modern MVC-based healthcare platform offering symptom analysis, medical PDF report summarization using large language models, and patient-doctor routing. The system uses a fast Node.js backend to support seamless API interactions and stores patient histories securely.</p>
+                  </div>
+                </div>
+
+                <div style="margin-top: 1.5rem;">
+                  <h4 style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--foreground);">Key Features</h4>
+                  <div class="flex flex-wrap gap-2">
+                    <span class="badge">Symptom Analysis</span>
+                    <span class="badge">Medical Report Summarization</span>
+                    <span class="badge">Doctor Consultation Router</span>
+                    <span class="badge">JWT Authentication</span>
+                    <span class="badge">REST APIs & MVC Architecture</span>
+                    <span class="badge">Secure Database Operations</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Slider Carousel block -->
+              <div class="case-study-right">
+                <div id="doconcall-carousel" class="carousel-container">
+                  <div class="carousel-viewport">
+                    <div class="carousel-slide active">
+                      <img src="images/doconcall/Screenshot (1477).png" alt="DocOnCall Patient Portal Dashboard" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/doconcall/Screenshot (1478).png" alt="DocOnCall Symptom Analyzer Interface" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/doconcall/Screenshot (1479).png" alt="DocOnCall Medical Report Upload and Summary" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/doconcall/Screenshot (1480).png" alt="DocOnCall Appointment Booking Panel" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/doconcall/Screenshot (1481).png" alt="DocOnCall Doctor Consult Panel" class="carousel-img" loading="lazy">
+                    </div>
+                    <div class="carousel-slide">
+                      <img src="images/doconcall/Screenshot (1482).png" alt="DocOnCall Administrative View" class="carousel-img" loading="lazy">
+                    </div>
+                  </div>
+                  <!-- Controls -->
+                  <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                  </button>
+                  <button type="button" class="carousel-btn carousel-btn-next" aria-label="Next Image">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                  </button>
+                </div>
+                <div class="carousel-indicators">
+                  <button type="button" class="carousel-dot active" aria-label="Go to slide 1"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 2"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 3"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 4"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 5"></button>
+                  <button type="button" class="carousel-dot" aria-label="Go to slide 6"></button>
+                </div>
+              </div>
+            </div>
+
+            <!-- Architecture Diagram -->
+            <div class="diagram-container">
+              <div class="diagram-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-10 5 10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
+                Architecture Blueprint
+              </div>
+              <div class="diagram-box">
+                <div class="diagram-grid">
+                  <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">🖥️ Client UI (HTML/CSS)</span>
+                      Symptom reporting forms & medical PDF uploads
+                    </div>
+                    <div class="diagram-node" style="margin-top: 1rem;">
+                      <span class="diagram-node-title">🔑 JWT Security</span>
+                      Client-side session tokens stored
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="diagram-node diagram-node-accent">
+                      <span class="diagram-node-title diagram-node-accent-title">🚀 Express Controllers</span>
+                      Routes REST requests & checks user sessions
+                    </div>
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">🛡️ Redaction Pipe</span>
+                      Local regex redaction strips PII from reports
+                    </div>
+                  </div>
+                  <div style="display: flex; flex-direction: column; gap: 1rem;">
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">🍃 MongoDB</span>
+                      Stores chat logs and clinical indexes
+                    </div>
+                    <div class="diagram-node">
+                      <span class="diagram-node-title">🧠 Groq / Gemini</span>
+                      LLM inference (Llama3 speed & Gemini PDFs)
+                    </div>
+                  </div>
+                </div>
+                <div class="diagram-footer">
+                  <span>Workflow: Client Request ➔ JWT Check ➔ PII Redaction ➔ Database / AI Inference ➔ Controller Response</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Decisions Table -->
+            <div style="margin-bottom: 2.5rem;">
+              <div class="diagram-title">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
+                Engineering Decisions & Trade-Offs
+              </div>
+              <div class="decision-table-wrapper">
+                <div class="decision-table-scroll">
+                  <table class="decision-table">
+                    <thead>
+                      <tr>
+                        <th style="width: 20%;">Decision</th>
+                        <th style="width: 20%;">Chosen Tech</th>
+                        <th style="width: 20%;">Alternatives</th>
+                        <th style="width: 40%;">Trade-offs & Rationale</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="decision-tech-name">Application Server</td>
+                        <td><span class="decision-choice-badge">Node.js with Express</span></td>
+                        <td class="decision-alternatives">Python Django, Ruby on Rails</td>
+                        <td>
+                          <div class="decision-details-p"><strong>Trade-off:</strong> Express lacks a built-in ORM, admin panel, or standardized architecture, requiring manual structure design (MVC).</div>
+                          <div class="decision-details-p"><strong>Benefits:</strong> Extremely lightweight and fast for high-concurrency patient dashboards and chat WebSockets; unified JavaScript syntax.</div>
+                          <div class="decision-details-p"><strong>Limitations:</strong> Single-threaded nature means heavy calculation tasks must be offloaded to keep routes responsive.</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="decision-tech-name">Database</td>
+                        <td><span class="decision-choice-badge">MongoDB</span></td>
+                        <td class="decision-alternatives">PostgreSQL, MySQL</td>
+                        <td>
+                          <div class="decision-details-p"><strong>Trade-off:</strong> Relational systems offer stronger ACID compliance, but schema updates are slow and rigid.</div>
+                          <div class="decision-details-p"><strong>Benefits:</strong> Polymorphic document schemas perfectly store dynamic medical reports and unstructured symptom checklists without migration.</div>
+                          <div class="decision-details-p"><strong>Limitations:</strong> Complex joins or aggregations require careful structuring of references.</div>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td class="decision-tech-name">Inference Engines</td>
+                        <td><span class="decision-choice-badge">Groq & Gemini API</span></td>
+                        <td class="decision-alternatives">OpenAI GPT-4</td>
+                        <td>
+                          <div class="decision-details-p"><strong>Trade-off:</strong> Maintaining two API keys increases complexity, but yields optimal speed and cost profiles.</div>
+                          <div class="decision-details-p"><strong>Benefits:</strong> Groq (Llama-3) provides sub-100ms response speeds for chats, while Gemini parses multi-page medical PDF files and extracts JSONs.</div>
+                          <div class="decision-details-p"><strong>Limitations:</strong> Groq has lower rate limits on free developer keys, requiring fallback logic.</div>
+                        </td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+
+            <!-- Challenges Grid -->
+            <div class="challenges-grid">
+              <div class="challenge-card">
+                <div class="challenge-card-title challenge-card-title-red">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                  Key Challenge
+                </div>
+                <p class="challenge-card-desc">Handling medical document summarization securely. Transferring medical documents directly to AI APIs without validation posed security risks. To address this, I built a local validation pipe that extracts text, redacts identifiable patient details (PII) like names and phone numbers via regex before sending the data to external LLMs.</p>
+              </div>
+              <div class="challenge-card">
+                <div class="challenge-card-title challenge-card-title-green">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  Lesson Learned
+                </div>
+                <p class="challenge-card-desc">When building AI applications in fields like healthcare, establishing rigid boundaries is crucial. I configured the LLM's system prompts to emphasize that it provides analytical summaries and screening inputs, rather than formal clinical diagnoses.</p>
+              </div>
+              <div class="challenge-card">
+                <div class="challenge-card-title challenge-card-title-blue">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
+                  Future Outlook
+                </div>
+                <ul class="challenge-card-desc challenge-list">
+                  <li>Integrate WebRTC for encrypted real-time video consultations directly on the portal.</li>
+                  <li>Add integrations with health metrics APIs (Fitbit, Google Fit) for chronic symptom tracking.</li>
+                  <li>Implement multi-lingual voice analysis for hands-free symptom checking.</li>
+                </ul>
+              </div>
+            </div>
+
+            <!-- Tech badges -->
+            <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built with:</span>
+              <span class="badge">Node.js</span>
+              <span class="badge">Express.js</span>
+              <span class="badge">MongoDB</span>
+              <span class="badge">Gemini API</span>
+              <span class="badge">Groq</span>
+              <span class="badge">JWT</span>
+              <span class="badge">Tailwind CSS</span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CURRENTLY BUILDING -->
+    <section class="bg-card">
+      <div class="container">
+        <div class="building-card reveal-on-scroll">
+          <div class="building-left">
+            <div class="status-badge-container">
+              <span class="pulse-dot">
+                <span class="pulse-ping"></span>
+                <span class="pulse-core"></span>
+              </span>
+              <span class="status-badge-text">Active Development</span>
+            </div>
+            
+            <h3 class="building-title">Currently Building: <span style="color: var(--accent);">RepoMind</span></h3>
+            <p class="building-focus">Focus: Evaluation Frameworks & Ingestion Speed</p>
+            
+            <div class="building-updates">
+              <p><strong>Latest Update:</strong> Optimized AST-aware chunking pipeline to support typescript and python repositories recursively.</p>
+              <p><strong>Next Milestone:</strong> Implement parallel indexing workers using Celery and Redis to speed up massive repository parsing.</p>
+            </div>
+          </div>
+
+          <div class="building-right">
+            <a href="https://github.com/Gyan-Ranjan-01/RepoMind" class="btn btn-secondary" style="justify-content: center; width: 100%;" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              View Source
+            </a>
+            <a href="https://repomind-eta.vercel.app/" class="btn btn-primary" style="justify-content: center; width: 100%;" target="_blank" rel="noopener noreferrer">
+              Try Live Demo
+              <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING JOURNEY -->
+    <section id="journey" class="bg-white scroll-mt-12">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <div class="section-badge">Engineering Journey</div>
+          <h2 class="section-title">Milestones & Growth</h2>
+          <p class="section-subtitle">A timeline of project milestones, academic entries, and building history.</p>
+        </div>
+
+        <div class="timeline-wrapper">
+          <div class="timeline-line"></div>
+          
+          <!-- Item 1 -->
+          <div class="timeline-item timeline-item-even reveal-on-scroll">
+            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card">
+              <div class="timeline-mobile-year">2025</div>
+              <h4 class="timeline-card-title">Entered IIEST Shibpur</h4>
+              <p class="timeline-card-desc">Began pursuing a B.Tech in Information Technology. Joined active student communities, including CodeIIEST, EDC, and DebSoc, to collaborate with fellow engineers.</p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item timeline-item-odd reveal-on-scroll">
+            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-year">2025</div>
+            <div class="timeline-card">
+              <div class="timeline-mobile-year">2025</div>
+              <h4 class="timeline-card-title">Won HackSprint Hackathon</h4>
+              <p class="timeline-card-desc">Awarded 'Best First-Year Team' at the HackSprint Hackathon, demonstrating problem-solving, rapid prototyping, and teamwork under time constraints.</p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item timeline-item-even reveal-on-scroll">
+            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-year">2025 - 2026</div>
+            <div class="timeline-card">
+              <div class="timeline-mobile-year">2025 - 2026</div>
+              <h4 class="timeline-card-title">Built & Deployed 5+ AI & Full-Stack Apps</h4>
+              <p class="timeline-card-desc">Developed and shipped multiple systems combining backend technologies with neural networks, focusing on building practical software that solves real-world needs.</p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item timeline-item-odd reveal-on-scroll">
+            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-year">2026</div>
+            <div class="timeline-card">
+              <div class="timeline-mobile-year">2026</div>
+              <h4 class="timeline-card-title">Deployed RepoMind on Production</h4>
+              <p class="timeline-card-desc">Built and launched RepoMind, an AI-powered GitHub analyzer leveraging FastAPI, Qdrant, and Gemini. Set up robust chunking, caching, and database schemas.</p>
+            </div>
+          </div>
+
+          <!-- Item 5 -->
+          <div class="timeline-item timeline-item-even reveal-on-scroll">
+            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-year">2026</div>
+            <div class="timeline-card">
+              <div class="timeline-mobile-year">2026</div>
+              <h4 class="timeline-card-title">Seeking AI Engineering Internship</h4>
+              <p class="timeline-card-desc">Actively looking for AI Engineering, Backend, or Software Engineering Internships where I can contribute to shipping production code and building AI pipelines.</p>
+            </div>
+          </div>
+
+          <!-- Item 6 -->
+          <div class="timeline-item timeline-item-odd reveal-on-scroll">
+            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-year">Long-Term</div>
+            <div class="timeline-card">
+              <div class="timeline-mobile-year">Long-Term</div>
+              <h4 class="timeline-card-title">Building Meaningful Technology</h4>
+              <p class="timeline-card-desc">Focused on developing core developer tooling, LLM integrations, and scalable architectures that address genuine challenges.</p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT SECTION -->
+    <section id="about" class="bg-white scroll-mt-12">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <div class="section-badge">About Me</div>
+          <h2 class="section-title">Pragmatic AI & Backend Engineering</h2>
+          <p class="section-subtitle">How I approach software design, building applications, and writing systems.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-left reveal-on-scroll">
+            <div class="about-story">
+              <p>I've been fascinated by computers since childhood—not just how they work, but how they can improve people's lives.</p>
+              <p>That curiosity eventually became programming when I realized I could build the applications I admired. Since then, I've focused on creating software that solves real-world problems rather than just completing tutorial projects.</p>
+              <p>Today I primarily build AI-powered applications, backend systems, and developer tools while continuously improving my software engineering skills. Long term, I want to build technology that genuinely matters.</p>
+            </div>
+            
+            <div class="academic-panel">
+              <svg class="icon" style="color: var(--accent); flex-shrink: 0; margin-top: 0.125rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+              <div>
+                <h4 class="academic-title">Academic Foundation</h4>
+                <p class="academic-desc">Pursuing B.Tech in Information Technology at <strong>Indian Institute of Engineering Science and Technology (IIEST), Shibpur</strong>. Current CGPA: <strong>9.22+</strong> (Expected Graduation: 2029).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="about-right reveal-on-scroll delay-150">
+            <div class="approach-card">
+              <h4 class="approach-title">My Approach to Code</h4>
+              <ul class="approach-list">
+                <li class="approach-list-item">
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span>Builds complete end-to-end AI applications.</span>
+                </li>
+                <li class="approach-list-item">
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span>Deploys projects instead of leaving them unfinished.</span>
+                </li>
+                <li class="approach-list-item">
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span>Enjoys understanding backend architecture and production systems.</span>
+                </li>
+                <li class="approach-list-item">
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span>Learns by building increasingly difficult software.</span>
+                </li>
+                <li class="approach-list-item">
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <span>Focuses on solving real problems instead of cloning existing products.</span>
+                </li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 class="focus-pills-title">Technical Focus Areas</h4>
+              <div class="focus-pills-container">
+                <span class="focus-pill">Backend Engineering</span>
+                <span class="focus-pill">Artificial Intelligence</span>
+                <span class="focus-pill">Large Language Models</span>
+                <span class="focus-pill">Retrieval-Augmented Generation</span>
+                <span class="focus-pill">Developer Tools</span>
+                <span class="focus-pill">Machine Learning</span>
+                <span class="focus-pill">System Design</span>
+                <span class="focus-pill">Software Architecture</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ENGINEERING PRINCIPLES -->
+    <section class="bg-card">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <div class="section-badge">Philosophy</div>
+          <h2 class="section-title">Engineering Principles</h2>
+          <p class="section-subtitle">Simple guidelines I follow when designing, writing, and refactoring codebase systems.</p>
+        </div>
+
+        <div class="principles-grid">
+          <!-- Card 1 -->
+          <div class="principles-card reveal-on-scroll">
+            <div class="principles-index">01</div>
+            <h3 class="principles-title">Build before optimizing</h3>
+            <p class="principles-desc">Get it working, understand the bounds, then optimize bottlenecks based on real data rather than assumptions.</p>
+          </div>
+          <!-- Card 2 -->
+          <div class="principles-card reveal-on-scroll delay-100">
+            <div class="principles-index">02</div>
+            <h3 class="principles-title">Simple > Clever</h3>
+            <p class="principles-desc">Write readable, maintainable code. Over-engineering creates complexity debt that slows down development.</p>
+          </div>
+          <!-- Card 3 -->
+          <div class="principles-card reveal-on-scroll delay-200">
+            <div class="principles-index">03</div>
+            <h3 class="principles-title">Ship > Perfect</h3>
+            <p class="principles-desc">Working software in production provides feedback. Polishing in isolation delays discovery of real issues.</p>
+          </div>
+          <!-- Card 4 -->
+          <div class="principles-card reveal-on-scroll delay-300">
+            <div class="principles-index">04</div>
+            <h3 class="principles-title">Solve real problems</h3>
+            <p class="principles-desc">Focus on building tools that address actual user needs or engineering friction, rather than cloning existing tutorials.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TECH STACK -->
+    <section class="bg-white">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <div class="section-badge">Capabilities</div>
+          <h2 class="section-title">Technical Infrastructure</h2>
+          <p class="section-subtitle">My skills and languages mapped across key software engineering domains.</p>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Domain 1 -->
+          <div class="skills-card reveal-on-scroll">
+            <h3 class="skills-domain-title">AI Engineering</h3>
+            <div class="skills-badges-container">
+              <span class="skills-pill">Large Language Models (LLMs)</span>
+              <span class="skills-pill">Retrieval-Augmented Generation (RAG)</span>
+              <span class="skills-pill">Gemini API</span>
+              <span class="skills-pill">Groq API</span>
+              <span class="skills-pill">LangChain</span>
+              <span class="skills-pill">Vector Databases (Qdrant, FAISS)</span>
+              <span class="skills-pill">PyTorch</span>
+              <span class="skills-pill">Scikit-Learn</span>
+              <span class="skills-pill">Sentence Transformers</span>
+              <span class="skills-pill">Hugging Face</span>
+            </div>
+          </div>
+
+          <!-- Domain 2 -->
+          <div class="skills-card reveal-on-scroll delay-100">
+            <h3 class="skills-domain-title">Backend Engineering</h3>
+            <div class="skills-badges-container">
+              <span class="skills-pill">Python</span>
+              <span class="skills-pill">FastAPI</span>
+              <span class="skills-pill">Node.js</span>
+              <span class="skills-pill">Express.js</span>
+              <span class="skills-pill">Flask</span>
+              <span class="skills-pill">MongoDB</span>
+              <span class="skills-pill">REST APIs</span>
+              <span class="skills-pill">MVC Architecture</span>
+              <span class="skills-pill">JWT Authentication</span>
+              <span class="skills-pill">C++</span>
+            </div>
+          </div>
+
+          <!-- Domain 3 -->
+          <div class="skills-card reveal-on-scroll">
+            <h3 class="skills-domain-title">Frontend Engineering</h3>
+            <div class="skills-badges-container">
+              <span class="skills-pill">Next.js</span>
+              <span class="skills-pill">React</span>
+              <span class="skills-pill">TypeScript</span>
+              <span class="skills-pill">JavaScript</span>
+              <span class="skills-pill">Tailwind CSS</span>
+              <span class="skills-pill">Framer Motion</span>
+              <span class="skills-pill">HTML5 / CSS3</span>
+              <span class="skills-pill">Responsive Layouts</span>
+            </div>
+          </div>
+
+          <!-- Domain 4 -->
+          <div class="skills-card reveal-on-scroll delay-100">
+            <h3 class="skills-domain-title">Dev Tools & Architecture</h3>
+            <div class="skills-badges-container">
+              <span class="skills-pill">Git</span>
+              <span class="skills-pill">GitHub</span>
+              <span class="skills-pill">Docker</span>
+              <span class="skills-pill">Vercel</span>
+              <span class="skills-pill">Cloudinary</span>
+              <span class="skills-pill">System Design</span>
+              <span class="skills-pill">Software Architecture</span>
+              <span class="skills-pill">Performance Optimization</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OTHER PROJECTS -->
+    <section class="bg-card">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <div class="section-badge">Secondary Projects</div>
+          <h2 class="section-title">Other Software Applications</h2>
+          <p class="section-subtitle">Additional experiments, models, and prototypes built to explore specific algorithms or frameworks.</p>
+        </div>
+
+        <div class="other-projects-grid">
+          <!-- Project 1 -->
+          <div class="other-project-card reveal-on-scroll">
+            <div class="other-project-header">
+              <h3 class="other-project-title">Plant Disease Classifier</h3>
+              <span class="other-project-status">Completed</span>
+            </div>
+            <p class="other-project-desc">Deep learning application using PyTorch to analyze crop leaves and diagnose plant diseases. Accelerates farm inspection by automating disease identification.</p>
+            <div class="other-project-tags">
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Python</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">PyTorch</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Flask</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Computer Vision</span>
+            </div>
+            <div class="other-project-links">
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2 -->
+          <div class="other-project-card reveal-on-scroll delay-100">
+            <div class="other-project-header">
+              <h3 class="other-project-title">Anime Recommendation System</h3>
+              <span class="other-project-status">Completed</span>
+            </div>
+            <p class="other-project-desc">Collaborative and content-based recommendation system that suggests media matches based on user watch histories and ratings metadata.</p>
+            <div class="other-project-tags">
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Python</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Scikit-Learn</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Pandas</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Streamlit</span>
+            </div>
+            <div class="other-project-links">
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3 -->
+          <div class="other-project-card reveal-on-scroll">
+            <div class="other-project-header">
+              <h3 class="other-project-title">Bengaluru House Price Prediction</h3>
+              <span class="other-project-status">Completed</span>
+            </div>
+            <p class="other-project-desc">Machine learning regression model trained on location, sizing, and amenities data to predict property prices in Bengaluru.</p>
+            <div class="other-project-tags">
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Python</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Scikit-Learn</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Numpy</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Flask</span>
+            </div>
+            <div class="other-project-links">
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 4 -->
+          <div class="other-project-card reveal-on-scroll delay-100">
+            <div class="other-project-header">
+              <h3 class="other-project-title">SweetSuite Property Platform</h3>
+              <span class="other-project-status">Completed</span>
+            </div>
+            <p class="other-project-desc">Full-stack real estate dashboard and property management platform facilitating bookings and rentals.</p>
+            <div class="other-project-tags">
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">React</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Node.js</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Express.js</span>
+              <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">MongoDB</span>
+            </div>
+            <div class="other-project-links">
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                Source Code
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CREDENTIALS / ACHIEVEMENTS -->
+    <section class="bg-white">
+      <div class="container">
+        <div class="section-heading reveal-on-scroll">
+          <div class="section-badge">Credentials</div>
+          <h2 class="section-title">Achievements & Metrics</h2>
+          <p class="section-subtitle">Key indicators of problem-solving expertise and academic consistency.</p>
+        </div>
+
+        <div class="achievements-grid">
+          <!-- Stat 1 -->
+          <div class="achievement-card reveal-on-scroll">
+            <div class="achievement-value">200+</div>
+            <h3 class="achievement-label">Problems Solved</h3>
+            <p class="achievement-desc">Algorithmic challenges solved across LeetCode, Codeforces, and CodeChef.</p>
+          </div>
+          <!-- Stat 2 -->
+          <div class="achievement-card reveal-on-scroll delay-100">
+            <div class="achievement-value">9.22+</div>
+            <h3 class="achievement-label">Current CGPA</h3>
+            <p class="achievement-desc">Academic excellence in Information Technology at IIEST Shibpur.</p>
+          </div>
+          <!-- Stat 3 -->
+          <div class="achievement-card reveal-on-scroll delay-200">
+            <div class="achievement-value">Winner</div>
+            <h3 class="achievement-label">HackSprint Hackathon</h3>
+            <p class="achievement-desc">Awarded 'Best First-Year Team' for building and pitching a functional prototype.</p>
+          </div>
+          <!-- Stat 4 -->
+          <div class="achievement-card reveal-on-scroll delay-300">
+            <div class="achievement-value">Pupil</div>
+            <h3 class="achievement-label">Codeforces Rating</h3>
+            <p class="achievement-desc">Active competitive programmer demonstrating strong problem-solving skills under time limits.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT SECTION -->
+    <section id="contact" class="bg-card scroll-mt-12">
+      <div class="container">
+        <div class="contact-container reveal-on-scroll">
+          <span class="contact-badge">Get In Touch</span>
+          <h2 class="contact-title">Let's build something meaningful.</h2>
+          <p class="contact-desc">I am actively looking for <strong>AI Engineering</strong>, <strong>Backend</strong>, or <strong>Software Engineering Internships</strong>. Whether you want to audit RAG ingestion pipelines, accelerate LLM inference speeds, or construct server frameworks—I am ready to ship.</p>
+          
+          <div class="contact-buttons">
+            <div class="contact-btn-wrapper">
+              <a href="mailto:gyanranjan01.contact@gmail.com" class="btn btn-primary">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Email
+              </a>
+            </div>
+            <div class="contact-btn-wrapper">
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                GitHub
+              </a>
+            </div>
+            <div class="contact-btn-wrapper">
+              <a href="https://linkedin.com/in/gyan-ranjan" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                LinkedIn
+              </a>
+            </div>
+            <div class="contact-btn-wrapper">
+              <a href="resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                Resume
+              </a>
+            </div>
+            <div class="contact-btn-wrapper">
+              <a href="https://leetcode.com/u/gyan_ranjan_01/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.777 9.778a1.38 1.38 0 0 0-.414.96c0 .376.156.719.414.96l9.777 9.778c.25.25.591.414.961.414a1.37 1.37 0 0 0 .96-.414l9.778-9.778a1.38 1.38 0 0 0 .414-.96 1.37 1.37 0 0 0-.414-.96L14.444.414A1.37 1.37 0 0 0 13.483 0zm0 2.766l8.347 8.347-8.347 8.347-8.347-8.347z"/></svg>
+                LeetCode
+              </a>
+            </div>
+            <div class="contact-btn-wrapper">
+              <a href="https://codeforces.com/profile/Gyan_Ranjan_01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4.5 7.5h3v14h-3zM10.5 3h3v18.5h-3zM16.5 12h3v9.5h-3z"/></svg>
+                Codeforces
+              </a>
+            </div>
+            <div class="contact-btn-wrapper">
+              <a href="https://www.codechef.com/users/gyan_ranjan_01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
+                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.2c5.422 0 9.8 4.378 9.8 9.8s-4.378 9.8-9.8 9.8S2.2 17.422 2.2 12s4.378-9.8 9.8-9.8zm0 2.5a7.3 7.3 0 1 0 0 14.6 7.3 7.3 0 0 0 0-14.6z"/></svg>
+                CodeChef
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="container footer-flex">
+      <div class="footer-copy">
+        © <span id="footer-year">2026</span> Gyan Ranjan. All rights reserved.
+      </div>
+      <div class="footer-links">
+        <a href="#" aria-label="Scroll back to top">Back to Top</a>
+        <span style="color: var(--border);">|</span>
+        <span>Designed & Built by Gyan Ranjan</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
