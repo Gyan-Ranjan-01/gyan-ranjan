@@ -42,3 +42,7 @@ next-env.d.ts
 
 # local helpers
 falsy.txt
+
+# local images & backups
+images/avatar.png
+assets/
