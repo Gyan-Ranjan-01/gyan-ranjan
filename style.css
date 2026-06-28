@@ -1234,152 +1234,84 @@ table.decision-table tr:hover {
   }
 }
 
-/* Journey Timeline */
+/* Journey Timeline (Sleek Compact Progression) */
 .timeline-wrapper {
   position: relative;
-  max-width: 48rem;
+  max-width: 38rem;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 4rem;
-  padding-left: 1.5rem;
-}
-
-@media (min-width: 640px) {
-  .timeline-wrapper {
-    padding-left: 0;
-  }
+  margin-top: 3rem;
+  padding-left: 0;
 }
 
 .timeline-line {
   position: absolute;
-  left: 8px;
-  top: 0;
-  bottom: 0;
+  left: 5.5rem;
+  top: 0.5rem;
+  bottom: 0.5rem;
   width: 1px;
   background-color: var(--border);
-  transform: translateX(-50%);
-}
-
-@media (min-width: 640px) {
-  .timeline-line {
-    left: 50%;
-  }
 }
 
 .timeline-item {
   position: relative;
   display: flex;
-  flex-direction: column;
-  margin-bottom: 3rem;
+  gap: 1.5rem;
+  margin-bottom: 1.75rem;
 }
 
-@media (min-width: 640px) {
-  .timeline-item {
-    flex-direction: row;
-    align-items: center;
-  }
-  .timeline-item-even {
-    justify-content: flex-start;
-  }
-  .timeline-item-odd {
-    justify-content: flex-end;
-  }
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -22px;
-  top: 6px;
-  width: 16px;
-  height: 16px;
-  border-radius: 9999px;
-  border: 1px solid var(--border);
-  background-color: var(--background);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 10;
-}
-
-@media (min-width: 640px) {
-  .timeline-dot {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-  }
-}
-
-.timeline-dot-core {
-  width: 6px;
-  height: 6px;
-  border-radius: 9999px;
-  background-color: var(--accent);
+.timeline-item:last-child {
+  margin-bottom: 0;
 }
 
 .timeline-year {
-  display: none;
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
+  width: 4.5rem;
+  flex-shrink: 0;
+  text-align: right;
   font-family: var(--font-mono);
-  font-size: 12px;
+  font-size: 0.8125rem;
   font-weight: 700;
   color: var(--accent);
+  margin-top: 0.125rem;
+  display: block;
 }
 
-@media (min-width: 640px) {
-  .timeline-year {
-    display: block;
-  }
-  .timeline-item-even .timeline-year {
-    left: calc(50% + 24px);
-    text-align: left;
-  }
-  .timeline-item-odd .timeline-year {
-    right: calc(50% + 24px);
-    text-align: right;
-  }
+.timeline-dot {
+  position: relative;
+  width: 1rem;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  margin-top: 0.375rem;
+  z-index: 10;
+  background: none;
+  border: none;
+  height: auto;
+}
+
+.timeline-dot-core {
+  width: 8px;
+  height: 8px;
+  border-radius: 9999px;
+  background-color: var(--accent);
+  border: 2px solid var(--background);
+  box-shadow: 0 0 0 3px var(--background);
 }
 
 .timeline-card {
-  width: 100%;
-  padding: 1.25rem;
-  border-radius: 0.75rem;
-  border: 1px solid var(--border);
-  background-color: var(--card);
-  box-shadow: 0 1px 2px rgba(0,0,0,0.02);
-  transition: all 0.3s ease;
-}
-
-@media (min-width: 640px) {
-  .timeline-card {
-    width: 45%;
-  }
-  .timeline-item-even .timeline-card {
-    margin-right: auto;
-  }
-  .timeline-item-odd .timeline-card {
-    margin-left: auto;
-  }
+  flex-grow: 1;
+  width: auto;
+  padding: 0;
+  border-radius: 0;
+  border: none;
+  background-color: transparent;
+  box-shadow: none;
+  transition: none;
 }
 
 .timeline-card:hover {
-  border-color: #d1d5db;
-  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
-}
-
-.timeline-mobile-year {
-  font-family: var(--font-mono);
-  font-size: 11px;
-  font-weight: 700;
-  color: var(--accent);
-  margin-bottom: 0.375rem;
-}
-
-@media (min-width: 640px) {
-  .timeline-mobile-year {
-    display: none;
-  }
+  border-color: transparent;
+  box-shadow: none;
 }
 
 .timeline-card-title {
@@ -1391,8 +1323,32 @@ table.decision-table tr:hover {
 .timeline-card-desc {
   font-size: 0.75rem;
   color: var(--secondary);
-  margin-top: 0.5rem;
-  line-height: 1.6;
+  margin-top: 0.375rem;
+  line-height: 1.65;
+}
+
+/* Mobile responsive compact styling */
+@media (max-width: 560px) {
+  .timeline-line {
+    left: 0.5rem;
+  }
+  .timeline-item {
+    flex-direction: column;
+    gap: 0.375rem;
+    padding-left: 1.5rem;
+    margin-bottom: 2rem;
+  }
+  .timeline-year {
+    width: auto;
+    text-align: left;
+    margin-top: 0;
+    font-size: 0.75rem;
+  }
+  .timeline-dot {
+    position: absolute;
+    left: 0.125rem;
+    top: 0.125rem;
+  }
 }
 
 /* About Section */
