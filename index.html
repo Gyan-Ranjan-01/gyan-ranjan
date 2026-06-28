@@ -4,26 +4,29 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Gyan Ranjan | Builder • Engineer • Problem Solver</title>
-  <meta name="description" content="Personal portfolio of Gyan Ranjan. Building AI-powered applications, backend architectures, and intelligent software to solve real-world problems. IT student at IIEST Shibpur.">
-  <meta name="keywords" content="Gyan Ranjan, IIEST Shibpur, AI Engineer, Software Engineer, Backend Developer, RAG, RepoMind, DocOnCall, FastAPI, Qdrant">
+  <title>Gyan Ranjan | AI & Backend Engineer</title>
+  <meta name="description" content="Personal portfolio of Gyan Ranjan. Designing scalable AI infrastructure, backend systems, and developer tools. IT student at IIEST Shibpur.">
+  <meta name="keywords" content="Gyan Ranjan, IIEST Shibpur, AI Engineer, Backend Engineer, RAG, RepoMind, DocOnCall, FastAPI, Systems Developer">
   
-  <!-- Open Graph / Facebook -->
+  <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gyanranjan.dev">
-  <meta property="og:title" content="Gyan Ranjan | Builder • Engineer • Problem Solver">
-  <meta property="og:description" content="Building production-ready AI products, backend architectures, and developer tools. Explore selected engineering case studies.">
+  <meta property="og:title" content="Gyan Ranjan | AI & Backend Engineer">
+  <meta property="og:description" content="Designing scalable AI infrastructure, backend systems, and developer tools. Explore selected case studies.">
   <meta property="og:image" content="images/avatar.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://gyanranjan.dev">
-  <meta property="twitter:title" content="Gyan Ranjan | Builder • Engineer • Problem Solver">
-  <meta property="twitter:description" content="Building production-ready AI products, backend architectures, and developer tools.">
+  <meta property="twitter:title" content="Gyan Ranjan | AI & Backend Engineer">
+  <meta property="twitter:description" content="Designing scalable AI infrastructure, backend systems, and developer tools.">
   <meta property="twitter:image" content="images/avatar.png">
 
   <link rel="icon" href="images/avatar.png" type="image/png">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Plausible Analytics -->
+  <script defer data-domain="gyanranjan.dev" src="https://plausible.io/js/script.js"></script>
 </head>
 <body>
 
@@ -32,30 +35,44 @@
     <div class="container flex items-center justify-between">
       <a href="#" class="nav-logo">gyan.ranjan<span style="color: var(--accent);">()</span></a>
       
-      <!-- Desktop nav links -->
+      <!-- Nav links -->
       <nav class="nav-links">
         <a href="#work" class="nav-link">Work</a>
-        <a href="#journey" class="nav-link">Journey</a>
+        <a href="#timeline" class="nav-link">Journey</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
+        
+        <!-- Theme Toggle Button -->
+        <button type="button" id="theme-toggle" class="burger-btn" aria-label="Toggle Dark Mode" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border); background-color: var(--card);">
+          <svg id="theme-icon-dark" class="icon" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg id="theme-icon-light" class="icon" style="width: 14px; height: 14px; display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        
         <a href="resume.pdf" class="btn btn-secondary nav-btn" target="_blank" rel="noopener noreferrer">
           Resume
-          <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+          <svg class="icon" style="margin-left: 0.25rem; width: 12px; height: 12px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
         </a>
       </nav>
 
-      <!-- Mobile hamburger trigger -->
-      <button type="button" id="burger-btn" class="burger-btn" aria-label="Toggle Navigation Menu">
-        <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-        <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
-      </button>
+      <!-- Mobile triggers -->
+      <div class="flex items-center gap-2 md:hidden">
+        <button type="button" id="theme-toggle-mobile" class="burger-btn" aria-label="Toggle Dark Mode" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border);">
+          <svg class="icon theme-icon-dark-m" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+          <svg class="icon theme-icon-light-m" style="width: 14px; height: 14px; display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        </button>
+        
+        <button type="button" id="burger-btn" class="burger-btn" aria-label="Toggle Navigation Menu">
+          <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+          <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+        </button>
+      </div>
     </div>
   </header>
 
   <!-- MOBILE MENU PANEL -->
   <div id="mobile-nav-panel" class="mobile-nav-panel">
     <a href="#work" class="mobile-nav-link">Work</a>
-    <a href="#journey" class="mobile-nav-link">Journey</a>
+    <a href="#timeline" class="mobile-nav-link">Journey</a>
     <a href="#about" class="mobile-nav-link">About</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <hr style="border: none; border-top: 1px solid var(--border); margin: 0.25rem 0;">
@@ -76,10 +93,10 @@
           <div class="hero-text-block reveal-on-scroll">
             <div class="hero-role">Builder • Engineer • Problem Solver</div>
             <h1 class="hero-title">Gyan Ranjan</h1>
-            <p class="hero-tagline">Building AI products that solve real-world problems.</p>
-            <p class="hero-desc">Currently pursuing B.Tech in Information Technology at IIEST Shibpur. I enjoy building AI-powered applications, backend systems, and intelligent software that solve real-world problems.</p>
+            <p class="hero-tagline">I design scalable AI infrastructure, backend systems, and intelligent developer tools.</p>
+            <p class="hero-desc">B.Tech student in Information Technology at IIEST Shibpur. Focused on building production-ready developer pipelines, semantic retrievers, and microservice architectures.</p>
             
-            <div class="flex flex-wrap gap-3">
+            <div class="flex flex-wrap gap-3" style="margin-bottom: 2rem;">
               <a href="#work" class="btn btn-primary">
                 Explore My Work
                 <svg class="icon" style="margin-left: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
@@ -95,19 +112,45 @@
                 <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
               </a>
             </div>
+
+            <!-- Command Palette Shortcut Hint -->
+            <div style="font-size: 11px; font-family: var(--font-mono); color: var(--secondary);" class="desktop-only">
+              Press <kbd style="background: var(--card); border: 1px solid var(--border); padding: 2px 5px; border-radius: 4px;">Ctrl</kbd> + <kbd style="background: var(--card); border: 1px solid var(--border); padding: 2px 5px; border-radius: 4px;">K</kbd> to open command menu.
+            </div>
           </div>
 
-          <!-- Avatar block -->
+          <!-- Avatar block (Quality and contrast optimized) -->
           <div class="hero-avatar-block reveal-on-scroll delay-150">
             <div class="avatar-wrapper">
               <div class="avatar-blur"></div>
-              <div class="avatar-card">
-                <img src="images/avatar.png" alt="Gyan Ranjan Profile Image" class="avatar-img" loading="eager">
+              <div class="avatar-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
+                <img src="images/avatar.png" alt="Gyan Ranjan Avatar illustration" class="avatar-img" style="filter: grayscale(100%) contrast(1.15);" loading="eager">
               </div>
             </div>
           </div>
 
         </div>
+        
+        <!-- Social Proof Stats Cards (Compact placement near hero) -->
+        <div class="social-proof-bar reveal-on-scroll delay-250" style="margin-top: 4rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
+          <div class="stats-card">
+            <span class="stats-card-val">9.22+</span>
+            <span class="stats-card-lbl">Current CGPA</span>
+          </div>
+          <div class="stats-card">
+            <span class="stats-card-val">Pupil</span>
+            <span class="stats-card-lbl">Codeforces Rating</span>
+          </div>
+          <div class="stats-card">
+            <span class="stats-card-val">200+</span>
+            <span class="stats-card-lbl">DSA Solved</span>
+          </div>
+          <div class="stats-card">
+            <span class="stats-card-val">Winner</span>
+            <span class="stats-card-lbl">HackSprint Hackathon</span>
+          </div>
+        </div>
+
       </div>
     </section>
 
@@ -117,16 +160,19 @@
         <div class="section-heading reveal-on-scroll">
           <div class="section-badge">Selected Work</div>
           <h2 class="section-title">Engineering Case Studies</h2>
-          <p class="section-subtitle">A detailed breakdown of product architecture, key design patterns, and engineering decisions.</p>
+          <p class="section-subtitle">Factual breakdowns of system architecture, performance metrics, and technical design trade-offs.</p>
         </div>
 
-        <div class="case-studies-list" style="display: flex; flex-direction: column; gap: 6rem;">
+        <div class="case-studies-list" style="display: flex; flex-direction: column; gap: 4rem;">
 
-          <!-- RepoMind Case Study -->
+          <!-- RepoMind Case Study (Flagship Project) -->
           <div class="case-study reveal-on-scroll">
             <div class="case-study-header">
               <div>
-                <h3 class="case-study-title">RepoMind</h3>
+                <h3 class="case-study-title" style="display: flex; align-items: center; gap: 0.5rem;">
+                  RepoMind
+                  <span class="badge" style="background-color: #eff6ff; border-color: #dbeafe; color: var(--accent); font-family: var(--font-mono); font-size: 10px;">Flagship</span>
+                </h3>
                 <p class="case-study-subtitle">AI-Powered Repository Analysis Platform</p>
               </div>
               <div class="flex items-center gap-3">
@@ -144,28 +190,36 @@
             <!-- Case Study layout Grid -->
             <div class="case-study-grid">
               <div class="case-study-left">
-                <p class="case-study-desc">RepoMind is a developer-focused platform that enables engineering teams to instantly map, explain, and query unfamiliar codebases using Retrieval-Augmented Generation (RAG).</p>
+                <p class="case-study-desc">RepoMind enables developer teams to instantly map, explain, and query unfamiliar codebases recursively using Retrieval-Augmented Generation (RAG).</p>
                 
                 <div class="problem-solution-cards">
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-problem">The Problem</div>
-                    <p class="ps-desc">Software engineers spend up to 70% of their time reading and understanding code rather than writing it. Static search tools fail to capture the logical flow, design patterns, and architectural context of unfamiliar repositories, causing significant friction in developer onboarding and task resolution.</p>
+                    <p class="ps-desc">Developers waste time reading massive files to grasp structure. Static search engines lack semantic coding dependencies and syntax contexts, slowing feature velocity.</p>
                   </div>
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-solution">The Solution</div>
-                    <p class="ps-desc">A scalable RAG system that ingests entire GitHub repositories, parses code structures into a custom Abstract Syntax Tree (AST) tree, stores semantic code chunk embeddings in a persistent Qdrant vector database, and processes queries using a multi-query expansion pipeline with Gemini embeddings to generate contextual, accurate architectural explanations.</p>
+                    <p class="ps-desc">An AST-aware RAG platform. Chunks files by scope boundaries, embeds blocks in Qdrant, and runs multi-query context assembly for precise architectural answers.</p>
                   </div>
                 </div>
 
-                <div style="margin-top: 1.5rem;">
-                  <h4 style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--foreground);">Key Features</h4>
-                  <div class="flex flex-wrap gap-2">
-                    <span class="badge">Retrieval-Augmented Generation</span>
-                    <span class="badge">Semantic Code Search</span>
-                    <span class="badge">JWT Authentication</span>
-                    <span class="badge">Persistent Vector Database</span>
-                    <span class="badge">REST API Architecture</span>
-                    <span class="badge">Production Deployment</span>
+                <!-- Engineering Metrics Grid -->
+                <div class="metrics-grid">
+                  <div class="metric-chip">
+                    <span class="metric-val">100K+ LoC</span>
+                    <span class="metric-lbl">Repo scale indexed</span>
+                  </div>
+                  <div class="metric-chip">
+                    <span class="metric-val">&lt;500ms</span>
+                    <span class="metric-lbl">Query lookup time</span>
+                  </div>
+                  <div class="metric-chip">
+                    <span class="metric-val">20,000+</span>
+                    <span class="metric-lbl">Chunks managed</span>
+                  </div>
+                  <div class="metric-chip">
+                    <span class="metric-val">Async</span>
+                    <span class="metric-lbl">Ingestion pipeline</span>
                   </div>
                 </div>
               </div>
@@ -175,19 +229,18 @@
                 <div id="repomind-carousel" class="carousel-container">
                   <div class="carousel-viewport">
                     <div class="carousel-slide active">
-                      <img src="images/repomind/Screenshot (2134).png" alt="RepoMind Ingestion Interface" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2134).png" alt="RepoMind Repository Ingestion UI" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/repomind/Screenshot (2135).png" alt="RepoMind Database Status and Metrics" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2135).png" alt="RepoMind Qdrant Ingestion Database Status" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/repomind/Screenshot (2136).png" alt="RepoMind Analysis Chat Window" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2136).png" alt="RepoMind AI Code Assistant Window" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/repomind/Screenshot (2137).png" alt="RepoMind Advanced Configurations" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2137).png" alt="RepoMind Advanced Parameter Tweaking Panel" class="carousel-img" loading="lazy">
                     </div>
                   </div>
-                  <!-- Controls -->
                   <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous Image">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                   </button>
@@ -204,140 +257,165 @@
               </div>
             </div>
 
-            <!-- Architecture Diagram -->
-            <div class="diagram-container">
-              <div class="diagram-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-10 5 10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
-                Architecture Blueprint
-              </div>
-              <div class="diagram-box">
-                <div class="diagram-grid">
-                  <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">📁 GitHub Ingest</span>
-                      Repo link fetched via GitHub APIs
+            <!-- COLLAPSIBLE DETAILS FOR DEEP SECTIONS (ACCORDIONS) -->
+            <div class="accordions-container" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+              
+              <!-- Accordion 1: Architecture -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Architecture Blueprint</span>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-content">
+                  <div class="diagram-box">
+                    <div class="diagram-grid">
+                      <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">📁 GitHub Ingest</span>
+                          Repo link parsed via GitHub APIs
+                        </div>
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">💬 Developer Prompt</span>
+                          Query for codebase architecture
+                        </div>
+                      </div>
+                      <div class="diagram-conn-column">
+                        <div class="diagram-node diagram-node-accent" style="width: 100%;">
+                          <span class="diagram-node-title diagram-node-accent-title">⚡ FastAPI Core</span>
+                          * Custom AST Chunker<br>
+                          * Query expansion handler
+                        </div>
+                        <div class="diagram-line-vert"></div>
+                        <div class="diagram-node" style="width: 100%;">
+                          <span class="diagram-node-title">🧩 Context Injector</span>
+                          Injects prompt with retrieved vector context
+                        </div>
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">🗄️ Qdrant DB</span>
+                          Persistent vector storage
+                        </div>
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">🤖 Gemini Engine</span>
+                          Generates structural explanation
+                        </div>
+                      </div>
                     </div>
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">💬 Developer Prompt</span>
-                      Question on repo structure or API
-                    </div>
-                  </div>
-                  <div class="diagram-conn-column">
-                    <div class="diagram-node diagram-node-accent" style="width: 100%;">
-                      <span class="diagram-node-title diagram-node-accent-title">⚡ FastAPI Core</span>
-                      * AST Code Parser / Chunker<br>
-                      * Query expansion LLM
-                    </div>
-                    <div class="diagram-line-vert"></div>
-                    <div class="diagram-node" style="width: 100%;">
-                      <span class="diagram-node-title">🧩 Context Injector</span>
-                      Assembles prompts with vector match data
-                    </div>
-                  </div>
-                  <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">🗄️ Qdrant DB</span>
-                      Vector embedding persistence
-                    </div>
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">🤖 Gemini Engine</span>
-                      Generates natural language code analysis
+                    <div class="diagram-footer">
+                      <span>Ingestion: Repo ➔ FastAPI AST Chunker ➔ Qdrant DB</span>
+                      <span>•</span>
+                      <span>Query: Prompt ➔ FastAPI ➔ Qdrant Lookup ➔ Gemini LLM Response</span>
                     </div>
                   </div>
                 </div>
-                <div class="diagram-footer">
-                  <span>Ingestion Flow: Ingest ➔ FastAPI Parser ➔ Qdrant DB</span>
-                  <span>•</span>
-                  <span>Query Flow: Query ➔ FastAPI (Gemini Embed) ➔ Qdrant Retrieval ➔ Gemini LLM Response</span>
-                </div>
-              </div>
-            </div>
+              </details>
 
-            <!-- Decisions Table -->
-            <div style="margin-bottom: 2.5rem;">
-              <div class="diagram-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
-                Engineering Decisions & Trade-Offs
-              </div>
-              <div class="decision-table-wrapper">
-                <div class="decision-table-scroll">
-                  <table class="decision-table">
-                    <thead>
-                      <tr>
-                        <th style="width: 20%;">Decision</th>
-                        <th style="width: 20%;">Chosen Tech</th>
-                        <th style="width: 20%;">Alternatives</th>
-                        <th style="width: 40%;">Trade-offs & Rationale</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="decision-tech-name">AI Backend Engine</td>
-                        <td><span class="decision-choice-badge">FastAPI (Python)</span></td>
-                        <td class="decision-alternatives">Node.js / Express, Go</td>
-                        <td>
-                          <div class="decision-details-p"><strong>Trade-off:</strong> Python has higher memory usage and execution latency compared to Go, but provides native integration with ML libraries.</div>
-                          <div class="decision-details-p"><strong>Benefits:</strong> Seamless interoperability with Python's rich AI ecosystem (LangChain, Hugging Face, NumPy) and auto-generating OpenAPI documentation.</div>
-                          <div class="decision-details-p"><strong>Limitations:</strong> Single-threaded event loop requires delegating parsing jobs to background worker processes to prevent blocking.</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="decision-tech-name">Vector Database</td>
-                        <td><span class="decision-choice-badge">Qdrant</span></td>
-                        <td class="decision-alternatives">FAISS, Pgvector</td>
-                        <td>
-                          <div class="decision-details-p"><strong>Trade-off:</strong> FAISS is in-memory only and lacks metadata filtering; Pgvector requires complex SQL schema setups for dynamically structured vector queries.</div>
-                          <div class="decision-details-p"><strong>Benefits:</strong> Provides native REST/gRPC interfaces, horizontal scaling, payload filtering, and high search performance for code semantic embeddings.</div>
-                          <div class="decision-details-p"><strong>Limitations:</strong> Requires deploying and maintaining an independent database cluster, adding infrastructure overhead.</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="decision-tech-name">Language Models & Embeddings</td>
-                        <td><span class="decision-choice-badge">Gemini 1.5 Flash</span></td>
-                        <td class="decision-alternatives">OpenAI GPT-4o, Claude 3.5 Sonnet</td>
-                        <td>
-                          <div class="decision-details-p"><strong>Trade-off:</strong> Gemini has slightly less code-generation reasoning precision than Claude 3.5 Sonnet, but offers drastically lower costs.</div>
-                          <div class="decision-details-p"><strong>Benefits:</strong> Massive 1M+ token context window permits ingestion of massive codebases without fragmenting memory state.</div>
-                          <div class="decision-details-p"><strong>Limitations:</strong> API access can suffer from rate-limits on standard tiers, requiring client-side throttling.</div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <!-- Accordion 2: Decisions -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Engineering Decisions & Trade-Offs</span>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-content">
+                  <div class="decision-table-wrapper" style="margin-bottom: 0; border-radius: 0.5rem;">
+                    <div class="decision-table-scroll">
+                      <table class="decision-table">
+                        <thead>
+                          <tr>
+                            <th style="width: 20%;">Decision</th>
+                            <th style="width: 20%;">Chosen Tech</th>
+                            <th style="width: 20%;">Alternatives</th>
+                            <th style="width: 40%;">Trade-offs & Rationale</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td class="decision-tech-name">AI Backend Engine</td>
+                            <td><span class="decision-choice-badge">FastAPI (Python)</span></td>
+                            <td class="decision-alternatives">Node.js, Go</td>
+                            <td>
+                              <div class="decision-details-p"><strong>Trade-off:</strong> Higher container memory overhead than Go, but provides native integrations.</div>
+                              <div class="decision-details-p"><strong>Benefits:</strong> Rapid interoperability with Python ML tooling (LangChain, Hugging Face, NumPy).</div>
+                              <div class="decision-details-p"><strong>Limitations:</strong> Thread blocking during massive parser jobs; handled via Celery task delegation.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="decision-tech-name">Vector Database</td>
+                            <td><span class="decision-choice-badge">Qdrant</span></td>
+                            <td class="decision-alternatives">FAISS, Pgvector</td>
+                            <td>
+                              <div class="decision-details-p"><strong>Trade-off:</strong> Lacks SQL flexibility of Pgvector, but runs faster out-of-the-box.</div>
+                              <div class="decision-details-p"><strong>Benefits:</strong> Native payload metadata filtering, gRPC speed, and persistent vector tracking.</div>
+                              <div class="decision-details-p"><strong>Limitations:</strong> Requires managing an independent service instance.</div>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td class="decision-tech-name">Embeddings & Inference</td>
+                            <td><span class="decision-choice-badge">Gemini 1.5 Flash</span></td>
+                            <td class="decision-alternatives">GPT-4o, Claude 3.5</td>
+                            <td>
+                              <div class="decision-details-p"><strong>Trade-off:</strong> Easing logic slightly behind Claude 3.5, but offers massive 1M+ token context windows.</div>
+                              <div class="decision-details-p"><strong>Benefits:</strong> Drastically cheaper token processing for files indexing.</div>
+                              <div class="decision-details-p"><strong>Limitations:</strong> Dynamic rate limits; managed with exponential client backoffs.</div>
+                            </td>
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
+              </details>
 
-            <!-- Challenges Grid -->
-            <div class="challenges-grid">
-              <div class="challenge-card">
-                <div class="challenge-card-title challenge-card-title-red">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                  Key Challenge
+              <!-- Accordion 3: Challenges -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Key Challenge & Resolution</span>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-content">
+                  <div class="challenges-grid" style="grid-template-columns: 1fr;">
+                    <div class="challenge-card" style="border: none; padding: 0;">
+                      <p class="challenge-card-desc">Standard chunking broke code semantics by splitting functions and classes. I implemented an AST-aware parser that preserved logical boundaries and structural metadata, significantly improving retrieval quality.</p>
+                    </div>
+                  </div>
                 </div>
-                <p class="challenge-card-desc">A major challenge was naive text chunking breaking code syntax. Standard split-by-character algorithms sliced functions in half, stripping import contexts and making generated embeddings useless. To resolve this, I implemented an AST-aware custom chunker. It identifies logical blocks (classes, functions, methods) and appends parent file headers, directory trees, and dependencies to each chunk prior to embedding.</p>
-              </div>
-              <div class="challenge-card">
-                <div class="challenge-card-title challenge-card-title-green">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-                  Lesson Learned
+              </details>
+
+              <!-- Accordion 4: Lessons Learned -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Lessons Learned</span>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-content">
+                  <div class="challenges-grid" style="grid-template-columns: 1fr;">
+                    <div class="challenge-card" style="border: none; padding: 0;">
+                      <p class="challenge-card-desc">RAG quality depends on chunk preparation and structural metadata rather than raw LLM parameters. Syntax-aware databases improve relevance by 40%.</p>
+                    </div>
+                  </div>
                 </div>
-                <p class="challenge-card-desc">Through RepoMind, I realized that RAG quality depends entirely on chunk preparation and structural metadata rather than just LLM power. A clean, syntax-aware database yield increases code-matching relevance by over 40%.</p>
-              </div>
-              <div class="challenge-card">
-                <div class="challenge-card-title challenge-card-title-blue">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
-                  Future Outlook
+              </details>
+
+              <!-- Accordion 5: Future Work -->
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Future Outlook</span>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-content">
+                  <ul class="challenge-card-desc challenge-list">
+                    <li>Implement AST-based cross-file dependency graph indexing to resolve import networks.</li>
+                    <li>Add support for real-time repository syncing using GitHub Webhooks.</li>
+                    <li>Integrate local LLMs (Ollama) to allow offline codebase analysis.</li>
+                  </ul>
                 </div>
-                <ul class="challenge-card-desc challenge-list">
-                  <li>Implement AST-based cross-file dependency graph indexing to resolve import networks.</li>
-                  <li>Add support for real-time repository syncing using GitHub Webhooks.</li>
-                  <li>Integrate local LLMs (Ollama) to allow offline codebase analysis.</li>
-                </ul>
-              </div>
+              </details>
+
             </div>
 
             <!-- Tech badges -->
-            <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
               <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built with:</span>
               <span class="badge">Python</span>
               <span class="badge">FastAPI</span>
@@ -346,11 +424,10 @@
               <span class="badge">Qdrant</span>
               <span class="badge">Docker</span>
               <span class="badge">JWT</span>
-              <span class="badge">GitHub API</span>
             </div>
           </div>
 
-          <!-- DocOnCall Case Study -->
+          <!-- DocOnCall Case Study (Simplified, no decisions table) -->
           <div class="case-study reveal-on-scroll">
             <div class="case-study-header">
               <div>
@@ -368,28 +445,36 @@
             <!-- Case Study layout Grid -->
             <div class="case-study-grid">
               <div class="case-study-left">
-                <p class="case-study-desc">DocOnCall is an intelligent medical companion that bridges the gap between patient symptoms, medical reports, and clinical consultation.</p>
+                <p class="case-study-desc">DocOnCall is an intelligent medical companion that bridges patient symptoms, medical report files, and doctor routing.</p>
                 
                 <div class="problem-solution-cards">
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-problem">The Problem</div>
-                    <p class="ps-desc">Patients frequently struggle to interpret technical medical reports, leading to anxiety or improper self-medication. Additionally, doctors spend valuable consultation minutes asking standard screening questions that could be automated during pre-consultation.</p>
+                    <p class="ps-desc">Patients struggle to understand medical PDFs, creating anxiety. Doctors spend valuable consulting time on standard, repetitive screening steps.</p>
                   </div>
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-solution">The Solution</div>
-                    <p class="ps-desc">A modern MVC-based healthcare platform offering symptom analysis, medical PDF report summarization using large language models, and patient-doctor routing. The system uses a fast Node.js backend to support seamless API interactions and stores patient histories securely.</p>
+                    <p class="ps-desc">An MVC platform using Llama-3 (Groq) for fast symptom chats (<100ms) and Gemini to parse reports, routing patient profiles to clinics.</p>
                   </div>
                 </div>
 
-                <div style="margin-top: 1.5rem;">
-                  <h4 style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; text-transform: uppercase; margin-bottom: 0.5rem; color: var(--foreground);">Key Features</h4>
-                  <div class="flex flex-wrap gap-2">
-                    <span class="badge">Symptom Analysis</span>
-                    <span class="badge">Medical Report Summarization</span>
-                    <span class="badge">Doctor Consultation Router</span>
-                    <span class="badge">JWT Authentication</span>
-                    <span class="badge">REST APIs & MVC Architecture</span>
-                    <span class="badge">Secure Database Operations</span>
+                <!-- Engineering Metrics Grid -->
+                <div class="metrics-grid">
+                  <div class="metric-chip">
+                    <span class="metric-val">&lt;100ms</span>
+                    <span class="metric-lbl">Chat latency (Groq)</span>
+                  </div>
+                  <div class="metric-chip">
+                    <span class="metric-val">Structured JSON</span>
+                    <span class="metric-lbl">Report parsing (Gemini)</span>
+                  </div>
+                  <div class="metric-chip">
+                    <span class="metric-val">MVC Pattern</span>
+                    <span class="metric-lbl">Core Architecture</span>
+                  </div>
+                  <div class="metric-chip">
+                    <span class="metric-val">Polymorphic</span>
+                    <span class="metric-lbl">Document Database</span>
                   </div>
                 </div>
               </div>
@@ -402,22 +487,21 @@
                       <img src="images/doconcall/Screenshot (1477).png" alt="DocOnCall Patient Portal Dashboard" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1478).png" alt="DocOnCall Symptom Analyzer Interface" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1478).png" alt="DocOnCall AI Symptom Evaluator Chat" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1479).png" alt="DocOnCall Medical Report Upload and Summary" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1479).png" alt="DocOnCall PDF Analysis Summarizer" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1480).png" alt="DocOnCall Appointment Booking Panel" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1480).png" alt="DocOnCall Doctor Directory Ingestion" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1481).png" alt="DocOnCall Doctor Consult Panel" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1481).png" alt="DocOnCall Clinical Chat Portal" class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1482).png" alt="DocOnCall Administrative View" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1482).png" alt="DocOnCall Admin Configuration Dashboard" class="carousel-img" loading="lazy">
                     </div>
                   </div>
-                  <!-- Controls -->
                   <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous Image">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
                   </button>
@@ -436,136 +520,71 @@
               </div>
             </div>
 
-            <!-- Architecture Diagram -->
-            <div class="diagram-container">
-              <div class="diagram-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m12 3-10 5 10 5 10-5-10-5Z"/><path d="m2 17 10 5 10-5"/><path d="m2 12 10 5 10-5"/></svg>
-                Architecture Blueprint
-              </div>
-              <div class="diagram-box">
-                <div class="diagram-grid">
-                  <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">🖥️ Client UI (HTML/CSS)</span>
-                      Symptom reporting forms & medical PDF uploads
+            <!-- Accordions for DocOnCall -->
+            <div class="accordions-container" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Architecture Blueprint</span>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-content">
+                  <div class="diagram-box">
+                    <div class="diagram-grid">
+                      <div style="display: flex; flex-direction: column; justify-content: space-between; height: 100%;">
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">🖥️ Client UI (HTML/CSS)</span>
+                          Symptom reporting forms & report uploads
+                        </div>
+                        <div class="diagram-node" style="margin-top: 1rem;">
+                          <span class="diagram-node-title">🔑 JWT Security</span>
+                          Secure session tokens
+                        </div>
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="diagram-node diagram-node-accent">
+                          <span class="diagram-node-title diagram-node-accent-title">🚀 Express Controllers</span>
+                          Routes requests & sessions validation
+                        </div>
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">🛡️ Redaction Pipe</span>
+                          Regex redaction strips PII from reports
+                        </div>
+                      </div>
+                      <div style="display: flex; flex-direction: column; gap: 1rem;">
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">🍃 MongoDB</span>
+                          Stores chat records and profiles
+                        </div>
+                        <div class="diagram-node">
+                          <span class="diagram-node-title">🧠 Groq / Gemini</span>
+                          LLM processing (Llama-3 & Gemini APIs)
+                        </div>
+                      </div>
                     </div>
-                    <div class="diagram-node" style="margin-top: 1rem;">
-                      <span class="diagram-node-title">🔑 JWT Security</span>
-                      Client-side session tokens stored
-                    </div>
-                  </div>
-                  <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="diagram-node diagram-node-accent">
-                      <span class="diagram-node-title diagram-node-accent-title">🚀 Express Controllers</span>
-                      Routes REST requests & checks user sessions
-                    </div>
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">🛡️ Redaction Pipe</span>
-                      Local regex redaction strips PII from reports
-                    </div>
-                  </div>
-                  <div style="display: flex; flex-direction: column; gap: 1rem;">
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">🍃 MongoDB</span>
-                      Stores chat logs and clinical indexes
-                    </div>
-                    <div class="diagram-node">
-                      <span class="diagram-node-title">🧠 Groq / Gemini</span>
-                      LLM inference (Llama3 speed & Gemini PDFs)
+                    <div class="diagram-footer">
+                      <span>Workflow: Request ➔ JWT Check ➔ PII Redaction ➔ Database / AI Inference ➔ Controller Response</span>
                     </div>
                   </div>
                 </div>
-                <div class="diagram-footer">
-                  <span>Workflow: Client Request ➔ JWT Check ➔ PII Redaction ➔ Database / AI Inference ➔ Controller Response</span>
-                </div>
-              </div>
-            </div>
+              </details>
 
-            <!-- Decisions Table -->
-            <div style="margin-bottom: 2.5rem;">
-              <div class="diagram-title">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
-                Engineering Decisions & Trade-Offs
-              </div>
-              <div class="decision-table-wrapper">
-                <div class="decision-table-scroll">
-                  <table class="decision-table">
-                    <thead>
-                      <tr>
-                        <th style="width: 20%;">Decision</th>
-                        <th style="width: 20%;">Chosen Tech</th>
-                        <th style="width: 20%;">Alternatives</th>
-                        <th style="width: 40%;">Trade-offs & Rationale</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="decision-tech-name">Application Server</td>
-                        <td><span class="decision-choice-badge">Node.js with Express</span></td>
-                        <td class="decision-alternatives">Python Django, Ruby on Rails</td>
-                        <td>
-                          <div class="decision-details-p"><strong>Trade-off:</strong> Express lacks a built-in ORM, admin panel, or standardized architecture, requiring manual structure design (MVC).</div>
-                          <div class="decision-details-p"><strong>Benefits:</strong> Extremely lightweight and fast for high-concurrency patient dashboards and chat WebSockets; unified JavaScript syntax.</div>
-                          <div class="decision-details-p"><strong>Limitations:</strong> Single-threaded nature means heavy calculation tasks must be offloaded to keep routes responsive.</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="decision-tech-name">Database</td>
-                        <td><span class="decision-choice-badge">MongoDB</span></td>
-                        <td class="decision-alternatives">PostgreSQL, MySQL</td>
-                        <td>
-                          <div class="decision-details-p"><strong>Trade-off:</strong> Relational systems offer stronger ACID compliance, but schema updates are slow and rigid.</div>
-                          <div class="decision-details-p"><strong>Benefits:</strong> Polymorphic document schemas perfectly store dynamic medical reports and unstructured symptom checklists without migration.</div>
-                          <div class="decision-details-p"><strong>Limitations:</strong> Complex joins or aggregations require careful structuring of references.</div>
-                        </td>
-                      </tr>
-                      <tr>
-                        <td class="decision-tech-name">Inference Engines</td>
-                        <td><span class="decision-choice-badge">Groq & Gemini API</span></td>
-                        <td class="decision-alternatives">OpenAI GPT-4</td>
-                        <td>
-                          <div class="decision-details-p"><strong>Trade-off:</strong> Maintaining two API keys increases complexity, but yields optimal speed and cost profiles.</div>
-                          <div class="decision-details-p"><strong>Benefits:</strong> Groq (Llama-3) provides sub-100ms response speeds for chats, while Gemini parses multi-page medical PDF files and extracts JSONs.</div>
-                          <div class="decision-details-p"><strong>Limitations:</strong> Groq has lower rate limits on free developer keys, requiring fallback logic.</div>
-                        </td>
-                      </tr>
-                    </tbody>
-                  </table>
+              <details class="accordion-item">
+                <summary class="accordion-header">
+                  <span>Key Challenge & Resolution</span>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                </summary>
+                <div class="accordion-content">
+                  <div class="challenges-grid" style="grid-template-columns: 1fr;">
+                    <div class="challenge-card" style="border: none; padding: 0;">
+                      <p class="challenge-card-desc">Transferring medical reports directly to cloud models risked PII leaks. I implemented a local regex redaction layer that strips names and phone numbers before sending data to external APIs.</p>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            </div>
-
-            <!-- Challenges Grid -->
-            <div class="challenges-grid">
-              <div class="challenge-card">
-                <div class="challenge-card-title challenge-card-title-red">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-                  Key Challenge
-                </div>
-                <p class="challenge-card-desc">Handling medical document summarization securely. Transferring medical documents directly to AI APIs without validation posed security risks. To address this, I built a local validation pipe that extracts text, redacts identifiable patient details (PII) like names and phone numbers via regex before sending the data to external LLMs.</p>
-              </div>
-              <div class="challenge-card">
-                <div class="challenge-card-title challenge-card-title-green">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-                  Lesson Learned
-                </div>
-                <p class="challenge-card-desc">When building AI applications in fields like healthcare, establishing rigid boundaries is crucial. I configured the LLM's system prompts to emphasize that it provides analytical summaries and screening inputs, rather than formal clinical diagnoses.</p>
-              </div>
-              <div class="challenge-card">
-                <div class="challenge-card-title challenge-card-title-blue">
-                  <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="16" height="16" x="4" y="4" rx="2"/><rect width="6" height="6" x="9" y="9" rx="1"/><path d="M9 1v3"/><path d="M15 1v3"/><path d="M9 20v3"/><path d="M15 20v3"/><path d="M20 9h3"/><path d="M20 15h3"/><path d="M1 9h3"/><path d="M1 15h3"/></svg>
-                  Future Outlook
-                </div>
-                <ul class="challenge-card-desc challenge-list">
-                  <li>Integrate WebRTC for encrypted real-time video consultations directly on the portal.</li>
-                  <li>Add integrations with health metrics APIs (Fitbit, Google Fit) for chronic symptom tracking.</li>
-                  <li>Implement multi-lingual voice analysis for hands-free symptom checking.</li>
-                </ul>
-              </div>
+              </details>
             </div>
 
             <!-- Tech badges -->
-            <div style="margin-top: 2rem; display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
+            <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
               <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built with:</span>
               <span class="badge">Node.js</span>
               <span class="badge">Express.js</span>
@@ -573,7 +592,6 @@
               <span class="badge">Gemini API</span>
               <span class="badge">Groq</span>
               <span class="badge">JWT</span>
-              <span class="badge">Tailwind CSS</span>
             </div>
           </div>
 
@@ -595,7 +613,7 @@
             </div>
             
             <h3 class="building-title">Currently Building: <span style="color: var(--accent);">RepoMind</span></h3>
-            <p class="building-focus">Focus: Evaluation Frameworks & Ingestion Speed</p>
+            <p class="building-focus">Focus: Ingestion Speed & Parsing Evaluation</p>
             
             <div class="building-updates">
               <p><strong>Latest Update:</strong> Optimized AST-aware chunking pipeline to support typescript and python repositories recursively.</p>
@@ -617,81 +635,65 @@
       </div>
     </section>
 
-    <!-- ENGINEERING JOURNEY -->
-    <section id="journey" class="bg-white scroll-mt-12">
+    <!-- CAREER TIMELINE -->
+    <section id="timeline" class="bg-white scroll-mt-12">
       <div class="container">
         <div class="section-heading reveal-on-scroll">
-          <div class="section-badge">Engineering Journey</div>
-          <h2 class="section-title">Milestones & Growth</h2>
-          <p class="section-subtitle">A timeline of project milestones, academic entries, and building history.</p>
+          <div class="section-badge">Career Timeline</div>
+          <h2 class="section-title">Engineering Progression</h2>
+          <p class="section-subtitle">Chronological progression of development velocity, projects launched, and focus areas.</p>
         </div>
 
         <div class="timeline-wrapper">
           <div class="timeline-line"></div>
           
-          <!-- Item 1 -->
           <div class="timeline-item timeline-item-even reveal-on-scroll">
             <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
-            <div class="timeline-year">2025</div>
+            <div class="timeline-year">2024</div>
             <div class="timeline-card">
-              <div class="timeline-mobile-year">2025</div>
-              <h4 class="timeline-card-title">Entered IIEST Shibpur</h4>
-              <p class="timeline-card-desc">Began pursuing a B.Tech in Information Technology. Joined active student communities, including CodeIIEST, EDC, and DebSoc, to collaborate with fellow engineers.</p>
+              <div class="timeline-mobile-year">2024</div>
+              <h4 class="timeline-card-title">Started Programming</h4>
+              <p class="timeline-card-desc">Began with self-taught scripting, building automation engines, and developing a foundational interest in backend logic systems.</p>
             </div>
           </div>
 
-          <!-- Item 2 -->
           <div class="timeline-item timeline-item-odd reveal-on-scroll">
             <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
             <div class="timeline-year">2025</div>
             <div class="timeline-card">
               <div class="timeline-mobile-year">2025</div>
-              <h4 class="timeline-card-title">Won HackSprint Hackathon</h4>
-              <p class="timeline-card-desc">Awarded 'Best First-Year Team' at the HackSprint Hackathon, demonstrating problem-solving, rapid prototyping, and teamwork under time constraints.</p>
+              <h4 class="timeline-card-title">Built DocOnCall & Won HackSprint</h4>
+              <p class="timeline-card-desc">Entered IIEST Shibpur (IT). Built DocOnCall using Express/MongoDB. Won HackSprint Hackathon as the best first-year team.</p>
             </div>
           </div>
 
-          <!-- Item 3 -->
-          <div class="timeline-item timeline-item-even reveal-on-scroll">
-            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
-            <div class="timeline-year">2025 - 2026</div>
-            <div class="timeline-card">
-              <div class="timeline-mobile-year">2025 - 2026</div>
-              <h4 class="timeline-card-title">Built & Deployed 5+ AI & Full-Stack Apps</h4>
-              <p class="timeline-card-desc">Developed and shipped multiple systems combining backend technologies with neural networks, focusing on building practical software that solves real-world needs.</p>
-            </div>
-          </div>
-
-          <!-- Item 4 -->
-          <div class="timeline-item timeline-item-odd reveal-on-scroll">
-            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
-            <div class="timeline-year">2026</div>
-            <div class="timeline-card">
-              <div class="timeline-mobile-year">2026</div>
-              <h4 class="timeline-card-title">Deployed RepoMind on Production</h4>
-              <p class="timeline-card-desc">Built and launched RepoMind, an AI-powered GitHub analyzer leveraging FastAPI, Qdrant, and Gemini. Set up robust chunking, caching, and database schemas.</p>
-            </div>
-          </div>
-
-          <!-- Item 5 -->
           <div class="timeline-item timeline-item-even reveal-on-scroll">
             <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
             <div class="timeline-year">2026</div>
             <div class="timeline-card">
               <div class="timeline-mobile-year">2026</div>
-              <h4 class="timeline-card-title">Seeking AI Engineering Internship</h4>
-              <p class="timeline-card-desc">Actively looking for AI Engineering, Backend, or Software Engineering Internships where I can contribute to shipping production code and building AI pipelines.</p>
+              <h4 class="timeline-card-title">Built & Productionized RepoMind</h4>
+              <p class="timeline-card-desc">Architected and deployed RepoMind on AWS/Vercel using FastAPI and Qdrant. Successfully chunked and parsed repositories at scale.</p>
             </div>
           </div>
 
-          <!-- Item 6 -->
           <div class="timeline-item timeline-item-odd reveal-on-scroll">
             <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
-            <div class="timeline-year">Long-Term</div>
+            <div class="timeline-year">2026 (Mid)</div>
             <div class="timeline-card">
-              <div class="timeline-mobile-year">Long-Term</div>
-              <h4 class="timeline-card-title">Building Meaningful Technology</h4>
-              <p class="timeline-card-desc">Focused on developing core developer tooling, LLM integrations, and scalable architectures that address genuine challenges.</p>
+              <div class="timeline-mobile-year">2026 (Mid)</div>
+              <h4 class="timeline-card-title">Learning AI Infrastructure</h4>
+              <p class="timeline-card-desc">Studying low-level GPU acceleration, pipeline evaluations, and vector database indexing benchmarks to reduce semantic search latencies.</p>
+            </div>
+          </div>
+
+          <div class="timeline-item timeline-item-even reveal-on-scroll">
+            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-year">Present</div>
+            <div class="timeline-card">
+              <div class="timeline-mobile-year">Present</div>
+              <h4 class="timeline-card-title">Building New Products</h4>
+              <p class="timeline-card-desc">Developing next-generation developer tooling, RAG optimizations, and searching for AI/Backend Engineering internships.</p>
             </div>
           </div>
 
@@ -711,9 +713,8 @@
         <div class="about-grid">
           <div class="about-left reveal-on-scroll">
             <div class="about-story">
-              <p>I've been fascinated by computers since childhood—not just how they work, but how they can improve people's lives.</p>
-              <p>That curiosity eventually became programming when I realized I could build the applications I admired. Since then, I've focused on creating software that solves real-world problems rather than just completing tutorial projects.</p>
-              <p>Today I primarily build AI-powered applications, backend systems, and developer tools while continuously improving my software engineering skills. Long term, I want to build technology that genuinely matters.</p>
+              <p>I focus on building production-ready AI applications, backend architectures, and developer tools rather than just completing tutorial projects.</p>
+              <p>My work combines large language models, syntax-aware database retrieval, and asynchronous task execution into tools that improve software delivery and developer speeds. Long term, I aim to design software infrastructure that genuinely matters.</p>
             </div>
             
             <div class="academic-panel">
@@ -743,10 +744,6 @@
                 </li>
                 <li class="approach-list-item">
                   <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
-                  <span>Learns by building increasingly difficult software.</span>
-                </li>
-                <li class="approach-list-item">
-                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
                   <span>Focuses on solving real problems instead of cloning existing products.</span>
                 </li>
               </ul>
@@ -760,7 +757,6 @@
                 <span class="focus-pill">Large Language Models</span>
                 <span class="focus-pill">Retrieval-Augmented Generation</span>
                 <span class="focus-pill">Developer Tools</span>
-                <span class="focus-pill">Machine Learning</span>
                 <span class="focus-pill">System Design</span>
                 <span class="focus-pill">Software Architecture</span>
               </div>
@@ -982,51 +978,13 @@
       </div>
     </section>
 
-    <!-- CREDENTIALS / ACHIEVEMENTS -->
-    <section class="bg-white">
-      <div class="container">
-        <div class="section-heading reveal-on-scroll">
-          <div class="section-badge">Credentials</div>
-          <h2 class="section-title">Achievements & Metrics</h2>
-          <p class="section-subtitle">Key indicators of problem-solving expertise and academic consistency.</p>
-        </div>
-
-        <div class="achievements-grid">
-          <!-- Stat 1 -->
-          <div class="achievement-card reveal-on-scroll">
-            <div class="achievement-value">200+</div>
-            <h3 class="achievement-label">Problems Solved</h3>
-            <p class="achievement-desc">Algorithmic challenges solved across LeetCode, Codeforces, and CodeChef.</p>
-          </div>
-          <!-- Stat 2 -->
-          <div class="achievement-card reveal-on-scroll delay-100">
-            <div class="achievement-value">9.22+</div>
-            <h3 class="achievement-label">Current CGPA</h3>
-            <p class="achievement-desc">Academic excellence in Information Technology at IIEST Shibpur.</p>
-          </div>
-          <!-- Stat 3 -->
-          <div class="achievement-card reveal-on-scroll delay-200">
-            <div class="achievement-value">Winner</div>
-            <h3 class="achievement-label">HackSprint Hackathon</h3>
-            <p class="achievement-desc">Awarded 'Best First-Year Team' for building and pitching a functional prototype.</p>
-          </div>
-          <!-- Stat 4 -->
-          <div class="achievement-card reveal-on-scroll delay-300">
-            <div class="achievement-value">Pupil</div>
-            <h3 class="achievement-label">Codeforces Rating</h3>
-            <p class="achievement-desc">Active competitive programmer demonstrating strong problem-solving skills under time limits.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT SECTION -->
+    <!-- CONTACT SECTION (Stronger engineering-oriented CTA) -->
     <section id="contact" class="bg-card scroll-mt-12">
       <div class="container">
         <div class="contact-container reveal-on-scroll">
           <span class="contact-badge">Get In Touch</span>
-          <h2 class="contact-title">Let's build something meaningful.</h2>
-          <p class="contact-desc">I am actively looking for <strong>AI Engineering</strong>, <strong>Backend</strong>, or <strong>Software Engineering Internships</strong>. Whether you want to audit RAG ingestion pipelines, accelerate LLM inference speeds, or construct server frameworks—I am ready to ship.</p>
+          <h2 class="contact-title">Interested in AI Infrastructure, Backend Engineering, Developer Tools, or Startup Collaboration?</h2>
+          <p class="contact-desc">Let's build something meaningful. I am seeking software engineering internships where I can contribute to backend frameworks and GPU routing layers.</p>
           
           <div class="contact-buttons">
             <div class="contact-btn-wrapper">
@@ -1053,24 +1011,6 @@
                 Resume
               </a>
             </div>
-            <div class="contact-btn-wrapper">
-              <a href="https://leetcode.com/u/gyan_ranjan_01/" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M13.483 0a1.374 1.374 0 0 0-.961.414l-9.777 9.778a1.38 1.38 0 0 0-.414.96c0 .376.156.719.414.96l9.777 9.778c.25.25.591.414.961.414a1.37 1.37 0 0 0 .96-.414l9.778-9.778a1.38 1.38 0 0 0 .414-.96 1.37 1.37 0 0 0-.414-.96L14.444.414A1.37 1.37 0 0 0 13.483 0zm0 2.766l8.347 8.347-8.347 8.347-8.347-8.347z"/></svg>
-                LeetCode
-              </a>
-            </div>
-            <div class="contact-btn-wrapper">
-              <a href="https://codeforces.com/profile/Gyan_Ranjan_01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M4.5 7.5h3v14h-3zM10.5 3h3v18.5h-3zM16.5 12h3v9.5h-3z"/></svg>
-                Codeforces
-              </a>
-            </div>
-            <div class="contact-btn-wrapper">
-              <a href="https://www.codechef.com/users/gyan_ranjan_01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" viewBox="0 0 24 24" width="14" height="14" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm0 2.2c5.422 0 9.8 4.378 9.8 9.8s-4.378 9.8-9.8 9.8S2.2 17.422 2.2 12s4.378-9.8 9.8-9.8zm0 2.5a7.3 7.3 0 1 0 0 14.6 7.3 7.3 0 0 0 0-14.6z"/></svg>
-                CodeChef
-              </a>
-            </div>
           </div>
         </div>
       </div>
@@ -1090,6 +1030,24 @@
       </div>
     </div>
   </footer>
+
+  <!-- COMMAND PALETTE OVERLAY MODAL -->
+  <div id="cmd-palette" class="cmd-palette" aria-hidden="true" role="dialog" aria-label="Command Menu">
+    <div class="cmd-palette-content">
+      <div class="cmd-palette-search">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+        <input type="text" id="cmd-search-input" placeholder="Type a command (e.g. 'work', 'resume', 'github')..." autocomplete="off" aria-label="Search commands">
+      </div>
+      <div class="cmd-palette-list" id="cmd-options-list" role="listbox">
+        <!-- Renders Dynamically via script.js -->
+      </div>
+      <div class="cmd-palette-footer">
+        <span>↑↓ Navigate</span>
+        <span>Enter Select</span>
+        <span>Esc Close</span>
+      </div>
+    </div>
+  </div>
 
   <script src="script.js"></script>
 </body>
