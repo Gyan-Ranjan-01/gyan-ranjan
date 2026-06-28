@@ -476,73 +476,17 @@ header.scrolled {
   margin-bottom: 2rem;
 }
 
-.hero-avatar-block {
-  display: flex;
-  justify-content: center;
+.hero-stats-block {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1rem;
+  width: 100%;
 }
 
 @media (min-width: 768px) {
-  .hero-avatar-block {
+  .hero-stats-block {
     grid-column: span 5;
-    justify-content: flex-end;
   }
-}
-
-.avatar-wrapper {
-  position: relative;
-}
-
-.avatar-blur {
-  position: absolute;
-  inset: 0;
-  background-color: rgba(37, 99, 235, 0.05);
-  border-radius: 1rem;
-  filter: blur(24px);
-  pointer-events: none;
-}
-
-.avatar-card {
-  position: relative;
-  aspect-ratio: 1;
-  width: 280px;
-  border-radius: 1rem;
-  border: 1px solid var(--border);
-  padding: 0.5rem;
-  background-color: var(--card);
-  box-shadow: 0 1px 3px rgba(0,0,0,0.05);
-  transition: all 0.3s ease;
-}
-
-@media (min-width: 640px) {
-  .avatar-card {
-    width: 340px;
-  }
-}
-
-.avatar-img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  border-radius: 0.75rem;
-  background-color: #ffffff;
-  filter: grayscale(100%) contrast(1.15);
-  transition: all 0.5s ease;
-}
-
-.dark .avatar-img {
-  background-color: #0f172a;
-}
-
-.avatar-card:hover .avatar-img {
-  filter: grayscale(0%) contrast(1);
-}
-
-.avatar-card:hover {
-  border-color: #d1d5db;
-}
-
-.dark .avatar-card:hover {
-  border-color: #475569;
 }
 
 /* Background Grid Lines */

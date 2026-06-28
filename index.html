@@ -1,69 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  
+
   <title>Gyan Ranjan | AI & Backend Engineer</title>
-  <meta name="description" content="Personal portfolio of Gyan Ranjan. Designing scalable AI infrastructure, backend systems, and developer tools. IT student at IIEST Shibpur.">
-  <meta name="keywords" content="Gyan Ranjan, IIEST Shibpur, AI Engineer, Backend Engineer, RAG, RepoMind, DocOnCall, FastAPI, Systems Developer">
-  
+  <meta name="description"
+    content="Personal portfolio of Gyan Ranjan. Designing scalable AI infrastructure, backend systems, and developer tools. IT student at IIEST Shibpur.">
+  <meta name="keywords"
+    content="Gyan Ranjan, IIEST Shibpur, AI Engineer, Backend Engineer, RAG, RepoMind, DocOnCall, FastAPI, Systems Developer">
+
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://gyanranjan.dev">
   <meta property="og:title" content="Gyan Ranjan | AI & Backend Engineer">
-  <meta property="og:description" content="Designing scalable AI infrastructure, backend systems, and developer tools. Explore selected case studies.">
+  <meta property="og:description"
+    content="Designing scalable AI infrastructure, backend systems, and developer tools. Explore selected case studies.">
   <meta property="og:image" content="images/avatar.png">
 
   <!-- Twitter -->
   <meta property="twitter:card" content="summary_large_image">
   <meta property="twitter:url" content="https://gyanranjan.dev">
   <meta property="twitter:title" content="Gyan Ranjan | AI & Backend Engineer">
-  <meta property="twitter:description" content="Designing scalable AI infrastructure, backend systems, and developer tools.">
+  <meta property="twitter:description"
+    content="Designing scalable AI infrastructure, backend systems, and developer tools.">
   <meta property="twitter:image" content="images/avatar.png">
 
   <link rel="icon" href="images/avatar.png" type="image/png">
   <link rel="stylesheet" href="style.css?v=2">
-  
+
   <!-- Plausible Analytics -->
   <script defer data-domain="gyanranjan.dev" src="https://plausible.io/js/script.js"></script>
 </head>
+
 <body>
 
   <!-- NAVBAR -->
   <header>
     <div class="container flex items-center justify-between">
       <a href="#" class="nav-logo">gyan.ranjan<span style="color: var(--accent);">()</span></a>
-      
+
       <!-- Nav links -->
       <nav class="nav-links">
         <a href="#work" class="nav-link">Work</a>
         <a href="#timeline" class="nav-link">Journey</a>
         <a href="#about" class="nav-link">About</a>
         <a href="#contact" class="nav-link">Contact</a>
-        
-        <!-- Theme Toggle Button -->
-        <button type="button" id="theme-toggle" class="burger-btn" aria-label="Toggle Dark Mode" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border); background-color: var(--card);">
-          <svg id="theme-icon-dark" class="icon" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-          <svg id="theme-icon-light" class="icon" style="width: 14px; height: 14px; display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
-        </button>
-        
+
+
         <a href="resume.pdf" class="btn btn-secondary nav-btn" target="_blank" rel="noopener noreferrer">
           Resume
-          <svg class="icon" style="margin-left: 0.25rem; width: 12px; height: 12px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+          <svg class="icon" style="margin-left: 0.25rem; width: 12px; height: 12px;" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M7 7h10v10" />
+            <path d="M17 7 7 17" />
+          </svg>
         </a>
       </nav>
 
       <!-- Mobile triggers -->
       <div class="flex items-center gap-2 md:hidden">
-        <button type="button" id="theme-toggle-mobile" class="burger-btn" aria-label="Toggle Dark Mode" style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border);">
-          <svg class="icon theme-icon-dark-m" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-          <svg class="icon theme-icon-light-m" style="width: 14px; height: 14px; display: none;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2"/><path d="M12 20v2"/><path d="m4.93 4.93 1.41 1.41"/><path d="m17.66 17.66 1.41 1.41"/><path d="M2 12h2"/><path d="M20 12h2"/><path d="m6.34 17.66-1.41 1.41"/><path d="m19.07 4.93-1.41 1.41"/></svg>
+        <button type="button" id="theme-toggle-mobile" class="burger-btn" aria-label="Toggle Dark Mode"
+          style="display: inline-flex; align-items: center; justify-content: center; width: 32px; height: 32px; border-radius: 6px; border: 1px solid var(--border);">
+          <svg class="icon theme-icon-dark-m" style="width: 14px; height: 14px;" xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z" />
+          </svg>
+          <svg class="icon theme-icon-light-m" style="width: 14px; height: 14px; display: none;"
+            xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="12" cy="12" r="4" />
+            <path d="M12 2v2" />
+            <path d="M12 20v2" />
+            <path d="m4.93 4.93 1.41 1.41" />
+            <path d="m17.66 17.66 1.41 1.41" />
+            <path d="M2 12h2" />
+            <path d="M20 12h2" />
+            <path d="m6.34 17.66-1.41 1.41" />
+            <path d="m19.07 4.93-1.41 1.41" />
+          </svg>
         </button>
-        
+
         <button type="button" id="burger-btn" class="burger-btn" aria-label="Toggle Navigation Menu">
-          <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-          <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+          <svg id="burger-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24"
+            fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+          <svg id="close-icon" style="display: none;" xmlns="http://www.w3.org/2000/svg" width="20" height="20"
+            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+            stroke-linejoin="round">
+            <line x1="18" x2="6" y1="6" y2="18" />
+            <line x1="6" x2="18" y1="6" y2="18" />
+          </svg>
         </button>
       </div>
     </div>
@@ -76,9 +109,15 @@
     <a href="#about" class="mobile-nav-link">About</a>
     <a href="#contact" class="mobile-nav-link">Contact</a>
     <hr style="border: none; border-top: 1px solid var(--border); margin: 0.25rem 0;">
-    <a href="resume.pdf" class="btn btn-primary" style="justify-content: center;" target="_blank" rel="noopener noreferrer">
+    <a href="resume.pdf" class="btn btn-primary" style="justify-content: center;" target="_blank"
+      rel="noopener noreferrer">
       Resume
-      <svg class="icon" style="margin-left: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+      <svg class="icon" style="margin-left: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+        viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+        stroke-linejoin="round">
+        <path d="M7 7h10v10" />
+        <path d="M17 7 7 17" />
+      </svg>
     </a>
   </div>
 
@@ -88,63 +127,80 @@
       <div class="bg-grid-lines"></div>
       <div class="container relative">
         <div class="hero-grid">
-          
+
           <!-- Bio block -->
           <div class="hero-text-block reveal-on-scroll">
             <div class="hero-role">Builder • Engineer • Problem Solver</div>
             <h1 class="hero-title">Gyan Ranjan</h1>
-            <p class="hero-tagline">I design scalable AI infrastructure, backend systems, and intelligent developer tools.</p>
-            <p class="hero-desc">B.Tech student in Information Technology at IIEST Shibpur. Focused on building production-ready developer pipelines, semantic retrievers, and microservice architectures.</p>
-            
+            <p class="hero-tagline">I design scalable AI infrastructure, backend systems, and intelligent developer
+              tools.</p>
+            <p class="hero-desc">B.Tech student in Information Technology at IIEST Shibpur. Focused on building
+              production-ready developer pipelines, semantic retrievers, and microservice architectures.</p>
+
             <div class="flex flex-wrap gap-3" style="margin-bottom: 2rem;">
               <a href="#work" class="btn btn-primary">
                 Explore My Work
-                <svg class="icon" style="margin-left: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 5v14"/><path d="m19 12-7 7-7-7"/></svg>
+                <svg class="icon" style="margin-left: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                  height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 5v14" />
+                  <path d="m19 12-7 7-7-7" />
+                </svg>
               </a>
               <a href="resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" style="margin-right: 0.375rem; color: var(--secondary);" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                <svg class="icon" style="margin-right: 0.375rem; color: var(--secondary);"
+                  xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  <path d="M10 9H8" />
+                  <path d="M16 13H8" />
+                  <path d="M16 17H8" />
+                </svg>
                 View Resume
               </a>
-              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" aria-label="GitHub Profile" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" aria-label="GitHub Profile"
+                target="_blank" rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
               </a>
-              <a href="https://linkedin.com/in/gyan-ranjan" class="btn btn-secondary" aria-label="LinkedIn Profile" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://linkedin.com/in/gyan-ranjan" class="btn btn-secondary" aria-label="LinkedIn Profile"
+                target="_blank" rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
               </a>
             </div>
 
           </div>
 
-          <!-- Avatar block (Quality and contrast optimized) -->
-          <div class="hero-avatar-block reveal-on-scroll delay-150">
-            <div class="avatar-wrapper">
-              <div class="avatar-blur"></div>
-              <div class="avatar-card" style="box-shadow: 0 4px 20px rgba(0,0,0,0.08);">
-                <img src="images/avatar.png" alt="Gyan Ranjan Avatar illustration" class="avatar-img" style="filter: grayscale(100%) contrast(1.15);" loading="eager">
-              </div>
+          <!-- Social Proof Stats Grid (Replacing avatar column to utilize space efficiently) -->
+          <div class="hero-stats-block reveal-on-scroll delay-150">
+            <div class="stats-card">
+              <span class="stats-card-val">9.22</span>
+              <span class="stats-card-lbl">Current CGPA</span>
+            </div>
+            <div class="stats-card">
+              <span class="stats-card-val">Pupil</span>
+              <span class="stats-card-lbl">Codeforces Rating</span>
+            </div>
+            <div class="stats-card">
+              <span class="stats-card-val">300+</span>
+              <span class="stats-card-lbl">DSA Solved</span>
+            </div>
+            <div class="stats-card">
+              <span class="stats-card-val">Winner</span>
+              <span class="stats-card-lbl">HackSprint Hackathon</span>
             </div>
           </div>
 
-        </div>
-        
-        <!-- Social Proof Stats Cards (Compact placement near hero) -->
-        <div class="social-proof-bar reveal-on-scroll delay-250" style="margin-top: 4rem; display: grid; grid-template-columns: repeat(2, 1fr); gap: 1rem;">
-          <div class="stats-card">
-            <span class="stats-card-val">9.22+</span>
-            <span class="stats-card-lbl">Current CGPA</span>
-          </div>
-          <div class="stats-card">
-            <span class="stats-card-val">Pupil</span>
-            <span class="stats-card-lbl">Codeforces Rating</span>
-          </div>
-          <div class="stats-card">
-            <span class="stats-card-val">200+</span>
-            <span class="stats-card-lbl">DSA Solved</span>
-          </div>
-          <div class="stats-card">
-            <span class="stats-card-val">Winner</span>
-            <span class="stats-card-lbl">HackSprint Hackathon</span>
-          </div>
         </div>
 
       </div>
@@ -156,7 +212,8 @@
         <div class="section-heading reveal-on-scroll">
           <div class="section-badge">Selected Work</div>
           <h2 class="section-title">Engineering Case Studies</h2>
-          <p class="section-subtitle">Factual breakdowns of system architecture, performance metrics, and technical design trade-offs.</p>
+          <p class="section-subtitle">Factual breakdowns of system architecture, performance metrics, and technical
+            design trade-offs.</p>
         </div>
 
         <div class="case-studies-list" style="display: flex; flex-direction: column; gap: 4rem;">
@@ -167,18 +224,32 @@
               <div>
                 <h3 class="case-study-title" style="display: flex; align-items: center; gap: 0.5rem;">
                   RepoMind
-                  <span class="badge" style="background-color: #eff6ff; border-color: #dbeafe; color: var(--accent); font-family: var(--font-mono); font-size: 10px;">Flagship</span>
+                  <span class="badge"
+                    style="background-color: #eff6ff; border-color: #dbeafe; color: var(--accent); font-family: var(--font-mono); font-size: 10px;">Flagship</span>
                 </h3>
                 <p class="case-study-subtitle">AI-Powered Repository Analysis Platform</p>
               </div>
               <div class="flex items-center gap-3">
-                <a href="https://github.com/Gyan-Ranjan-01/RepoMind" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                  <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <a href="https://github.com/Gyan-Ranjan-01/RepoMind" class="btn btn-secondary" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
                   View Source
                 </a>
-                <a href="https://repomind-eta.vercel.app/" class="btn btn-primary" target="_blank" rel="noopener noreferrer">
+                <a href="https://repomind-eta.vercel.app/" class="btn btn-primary" target="_blank"
+                  rel="noopener noreferrer">
                   Try Live Demo
-                  <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+                  <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M7 7h10v10" />
+                    <path d="M17 7 7 17" />
+                  </svg>
                 </a>
               </div>
             </div>
@@ -186,16 +257,19 @@
             <!-- Case Study layout Grid -->
             <div class="case-study-grid">
               <div class="case-study-left">
-                <p class="case-study-desc">RepoMind enables developer teams to instantly map, explain, and query unfamiliar codebases recursively using Retrieval-Augmented Generation (RAG).</p>
-                
+                <p class="case-study-desc">RepoMind enables developer teams to instantly map, explain, and query
+                  unfamiliar codebases recursively using Retrieval-Augmented Generation (RAG).</p>
+
                 <div class="problem-solution-cards">
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-problem">The Problem</div>
-                    <p class="ps-desc">Developers waste time reading massive files to grasp structure. Static search engines lack semantic coding dependencies and syntax contexts, slowing feature velocity.</p>
+                    <p class="ps-desc">Developers waste time reading massive files to grasp structure. Static search
+                      engines lack semantic coding dependencies and syntax contexts, slowing feature velocity.</p>
                   </div>
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-solution">The Solution</div>
-                    <p class="ps-desc">An AST-aware RAG platform. Chunks files by scope boundaries, embeds blocks in Qdrant, and runs multi-query context assembly for precise architectural answers.</p>
+                    <p class="ps-desc">An AST-aware RAG platform. Chunks files by scope boundaries, embeds blocks in
+                      Qdrant, and runs multi-query context assembly for precise architectural answers.</p>
                   </div>
                 </div>
 
@@ -225,23 +299,33 @@
                 <div id="repomind-carousel" class="carousel-container">
                   <div class="carousel-viewport">
                     <div class="carousel-slide active">
-                      <img src="images/repomind/Screenshot (2134).png" alt="RepoMind Repository Ingestion UI" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2134).png" alt="RepoMind Repository Ingestion UI"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/repomind/Screenshot (2135).png" alt="RepoMind Qdrant Ingestion Database Status" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2135).png" alt="RepoMind Qdrant Ingestion Database Status"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/repomind/Screenshot (2136).png" alt="RepoMind AI Code Assistant Window" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2136).png" alt="RepoMind AI Code Assistant Window"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/repomind/Screenshot (2137).png" alt="RepoMind Advanced Parameter Tweaking Panel" class="carousel-img" loading="lazy">
+                      <img src="images/repomind/Screenshot (2137).png" alt="RepoMind Advanced Parameter Tweaking Panel"
+                        class="carousel-img" loading="lazy">
                     </div>
                   </div>
                   <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous Image">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m15 18-6-6 6-6" />
+                    </svg>
                   </button>
                   <button type="button" class="carousel-btn carousel-btn-next" aria-label="Next Image">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
                   </button>
                 </div>
                 <div class="carousel-indicators">
@@ -254,13 +338,18 @@
             </div>
 
             <!-- COLLAPSIBLE DETAILS FOR DEEP SECTIONS (ACCORDIONS) -->
-            <div class="accordions-container" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
-              
+            <div class="accordions-container"
+              style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+
               <!-- Accordion 1: Architecture -->
               <details class="accordion-item">
                 <summary class="accordion-header">
                   <span>Architecture Blueprint</span>
-                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="accordion-content">
                   <div class="diagram-box">
@@ -311,7 +400,11 @@
               <details class="accordion-item">
                 <summary class="accordion-header">
                   <span>Engineering Decisions & Trade-Offs</span>
-                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="accordion-content">
                   <div class="decision-table-wrapper" style="margin-bottom: 0; border-radius: 0.5rem;">
@@ -331,9 +424,12 @@
                             <td><span class="decision-choice-badge">FastAPI (Python)</span></td>
                             <td class="decision-alternatives">Node.js, Go</td>
                             <td>
-                              <div class="decision-details-p"><strong>Trade-off:</strong> Higher container memory overhead than Go, but provides native integrations.</div>
-                              <div class="decision-details-p"><strong>Benefits:</strong> Rapid interoperability with Python ML tooling (LangChain, Hugging Face, NumPy).</div>
-                              <div class="decision-details-p"><strong>Limitations:</strong> Thread blocking during massive parser jobs; handled via Celery task delegation.</div>
+                              <div class="decision-details-p"><strong>Trade-off:</strong> Higher container memory
+                                overhead than Go, but provides native integrations.</div>
+                              <div class="decision-details-p"><strong>Benefits:</strong> Rapid interoperability with
+                                Python ML tooling (LangChain, Hugging Face, NumPy).</div>
+                              <div class="decision-details-p"><strong>Limitations:</strong> Thread blocking during
+                                massive parser jobs; handled via Celery task delegation.</div>
                             </td>
                           </tr>
                           <tr>
@@ -341,9 +437,12 @@
                             <td><span class="decision-choice-badge">Qdrant</span></td>
                             <td class="decision-alternatives">FAISS, Pgvector</td>
                             <td>
-                              <div class="decision-details-p"><strong>Trade-off:</strong> Lacks SQL flexibility of Pgvector, but runs faster out-of-the-box.</div>
-                              <div class="decision-details-p"><strong>Benefits:</strong> Native payload metadata filtering, gRPC speed, and persistent vector tracking.</div>
-                              <div class="decision-details-p"><strong>Limitations:</strong> Requires managing an independent service instance.</div>
+                              <div class="decision-details-p"><strong>Trade-off:</strong> Lacks SQL flexibility of
+                                Pgvector, but runs faster out-of-the-box.</div>
+                              <div class="decision-details-p"><strong>Benefits:</strong> Native payload metadata
+                                filtering, gRPC speed, and persistent vector tracking.</div>
+                              <div class="decision-details-p"><strong>Limitations:</strong> Requires managing an
+                                independent service instance.</div>
                             </td>
                           </tr>
                           <tr>
@@ -351,9 +450,12 @@
                             <td><span class="decision-choice-badge">Gemini 1.5 Flash</span></td>
                             <td class="decision-alternatives">GPT-4o, Claude 3.5</td>
                             <td>
-                              <div class="decision-details-p"><strong>Trade-off:</strong> Easing logic slightly behind Claude 3.5, but offers massive 1M+ token context windows.</div>
-                              <div class="decision-details-p"><strong>Benefits:</strong> Drastically cheaper token processing for files indexing.</div>
-                              <div class="decision-details-p"><strong>Limitations:</strong> Dynamic rate limits; managed with exponential client backoffs.</div>
+                              <div class="decision-details-p"><strong>Trade-off:</strong> Easing logic slightly behind
+                                Claude 3.5, but offers massive 1M+ token context windows.</div>
+                              <div class="decision-details-p"><strong>Benefits:</strong> Drastically cheaper token
+                                processing for files indexing.</div>
+                              <div class="decision-details-p"><strong>Limitations:</strong> Dynamic rate limits; managed
+                                with exponential client backoffs.</div>
                             </td>
                           </tr>
                         </tbody>
@@ -367,12 +469,18 @@
               <details class="accordion-item">
                 <summary class="accordion-header">
                   <span>Key Challenge & Resolution</span>
-                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="accordion-content">
                   <div class="challenges-grid" style="grid-template-columns: 1fr;">
                     <div class="challenge-card" style="border: none; padding: 0;">
-                      <p class="challenge-card-desc">Standard chunking broke code semantics by splitting functions and classes. I implemented an AST-aware parser that preserved logical boundaries and structural metadata, significantly improving retrieval quality.</p>
+                      <p class="challenge-card-desc">Standard chunking broke code semantics by splitting functions and
+                        classes. I implemented an AST-aware parser that preserved logical boundaries and structural
+                        metadata, significantly improving retrieval quality.</p>
                     </div>
                   </div>
                 </div>
@@ -382,12 +490,17 @@
               <details class="accordion-item">
                 <summary class="accordion-header">
                   <span>Lessons Learned</span>
-                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="accordion-content">
                   <div class="challenges-grid" style="grid-template-columns: 1fr;">
                     <div class="challenge-card" style="border: none; padding: 0;">
-                      <p class="challenge-card-desc">RAG quality depends on chunk preparation and structural metadata rather than raw LLM parameters. Syntax-aware databases improve relevance by 40%.</p>
+                      <p class="challenge-card-desc">RAG quality depends on chunk preparation and structural metadata
+                        rather than raw LLM parameters. Syntax-aware databases improve relevance by 40%.</p>
                     </div>
                   </div>
                 </div>
@@ -397,7 +510,11 @@
               <details class="accordion-item">
                 <summary class="accordion-header">
                   <span>Future Outlook</span>
-                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="accordion-content">
                   <ul class="challenge-card-desc challenge-list">
@@ -412,7 +529,9 @@
 
             <!-- Tech badges -->
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built with:</span>
+              <span
+                style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built
+                with:</span>
               <span class="badge">Python</span>
               <span class="badge">FastAPI</span>
               <span class="badge">MongoDB</span>
@@ -431,8 +550,15 @@
                 <p class="case-study-subtitle">AI-Powered Healthcare Assistance Platform</p>
               </div>
               <div class="flex items-center gap-3">
-                <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                  <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+                <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" target="_blank"
+                  rel="noopener noreferrer">
+                  <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                    height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <path
+                      d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                    <path d="M9 18c-4.51 2-5-2-7-2" />
+                  </svg>
                   View Source
                 </a>
               </div>
@@ -441,16 +567,19 @@
             <!-- Case Study layout Grid -->
             <div class="case-study-grid">
               <div class="case-study-left">
-                <p class="case-study-desc">DocOnCall is an intelligent medical companion that bridges patient symptoms, medical report files, and doctor routing.</p>
-                
+                <p class="case-study-desc">DocOnCall is an intelligent medical companion that bridges patient symptoms,
+                  medical report files, and doctor routing.</p>
+
                 <div class="problem-solution-cards">
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-problem">The Problem</div>
-                    <p class="ps-desc">Patients struggle to understand medical PDFs, creating anxiety. Doctors spend valuable consulting time on standard, repetitive screening steps.</p>
+                    <p class="ps-desc">Patients struggle to understand medical PDFs, creating anxiety. Doctors spend
+                      valuable consulting time on standard, repetitive screening steps.</p>
                   </div>
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-solution">The Solution</div>
-                    <p class="ps-desc">An MVC platform using Llama-3 (Groq) for fast symptom chats (<100ms) and Gemini to parse reports, routing patient profiles to clinics.</p>
+                    <p class="ps-desc">An MVC platform using Llama-3 (Groq) for fast symptom chats (<100ms) and Gemini
+                        to parse reports, routing patient profiles to clinics.</p>
                   </div>
                 </div>
 
@@ -480,29 +609,41 @@
                 <div id="doconcall-carousel" class="carousel-container">
                   <div class="carousel-viewport">
                     <div class="carousel-slide active">
-                      <img src="images/doconcall/Screenshot (1477).png" alt="DocOnCall Patient Portal Dashboard" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1477).png" alt="DocOnCall Patient Portal Dashboard"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1478).png" alt="DocOnCall AI Symptom Evaluator Chat" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1478).png" alt="DocOnCall AI Symptom Evaluator Chat"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1479).png" alt="DocOnCall PDF Analysis Summarizer" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1479).png" alt="DocOnCall PDF Analysis Summarizer"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1480).png" alt="DocOnCall Doctor Directory Ingestion" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1480).png" alt="DocOnCall Doctor Directory Ingestion"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1481).png" alt="DocOnCall Clinical Chat Portal" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1481).png" alt="DocOnCall Clinical Chat Portal"
+                        class="carousel-img" loading="lazy">
                     </div>
                     <div class="carousel-slide">
-                      <img src="images/doconcall/Screenshot (1482).png" alt="DocOnCall Admin Configuration Dashboard" class="carousel-img" loading="lazy">
+                      <img src="images/doconcall/Screenshot (1482).png" alt="DocOnCall Admin Configuration Dashboard"
+                        class="carousel-img" loading="lazy">
                     </div>
                   </div>
                   <button type="button" class="carousel-btn carousel-btn-prev" aria-label="Previous Image">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m15 18-6-6 6-6" />
+                    </svg>
                   </button>
                   <button type="button" class="carousel-btn carousel-btn-next" aria-label="Next Image">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                      stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                      <path d="m9 18 6-6-6-6" />
+                    </svg>
                   </button>
                 </div>
                 <div class="carousel-indicators">
@@ -517,11 +658,16 @@
             </div>
 
             <!-- Accordions for DocOnCall -->
-            <div class="accordions-container" style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
+            <div class="accordions-container"
+              style="display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem;">
               <details class="accordion-item">
                 <summary class="accordion-header">
                   <span>Architecture Blueprint</span>
-                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="accordion-content">
                   <div class="diagram-box">
@@ -558,7 +704,8 @@
                       </div>
                     </div>
                     <div class="diagram-footer">
-                      <span>Workflow: Request ➔ JWT Check ➔ PII Redaction ➔ Database / AI Inference ➔ Controller Response</span>
+                      <span>Workflow: Request ➔ JWT Check ➔ PII Redaction ➔ Database / AI Inference ➔ Controller
+                        Response</span>
                     </div>
                   </div>
                 </div>
@@ -567,12 +714,18 @@
               <details class="accordion-item">
                 <summary class="accordion-header">
                   <span>Key Challenge & Resolution</span>
-                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m6 9 6 6 6-6"/></svg>
+                  <svg class="accordion-arrow icon" xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path d="m6 9 6 6 6-6" />
+                  </svg>
                 </summary>
                 <div class="accordion-content">
                   <div class="challenges-grid" style="grid-template-columns: 1fr;">
                     <div class="challenge-card" style="border: none; padding: 0;">
-                      <p class="challenge-card-desc">Transferring medical reports directly to cloud models risked PII leaks. I implemented a local regex redaction layer that strips names and phone numbers before sending data to external APIs.</p>
+                      <p class="challenge-card-desc">Transferring medical reports directly to cloud models risked PII
+                        leaks. I implemented a local regex redaction layer that strips names and phone numbers before
+                        sending data to external APIs.</p>
                     </div>
                   </div>
                 </div>
@@ -581,7 +734,9 @@
 
             <!-- Tech badges -->
             <div style="display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap;">
-              <span style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built with:</span>
+              <span
+                style="font-family: var(--font-mono); font-size: 11px; font-weight: 600; color: var(--secondary); margin-right: 0.5rem;">Built
+                with:</span>
               <span class="badge">Node.js</span>
               <span class="badge">Express.js</span>
               <span class="badge">MongoDB</span>
@@ -607,24 +762,39 @@
               </span>
               <span class="status-badge-text">Active Development</span>
             </div>
-            
+
             <h3 class="building-title">Currently Building: <span style="color: var(--accent);">RepoMind</span></h3>
             <p class="building-focus">Focus: Ingestion Speed & Parsing Evaluation</p>
-            
+
             <div class="building-updates">
-              <p><strong>Latest Update:</strong> Optimized AST-aware chunking pipeline to support typescript and python repositories recursively.</p>
-              <p><strong>Next Milestone:</strong> Implement parallel indexing workers using Celery and Redis to speed up massive repository parsing.</p>
+              <p><strong>Latest Update:</strong> Optimized AST-aware chunking pipeline to support typescript and python
+                repositories recursively.</p>
+              <p><strong>Next Milestone:</strong> Implement parallel indexing workers using Celery and Redis to speed up
+                massive repository parsing.</p>
             </div>
           </div>
 
           <div class="building-right">
-            <a href="https://github.com/Gyan-Ranjan-01/RepoMind" class="btn btn-secondary" style="justify-content: center; width: 100%;" target="_blank" rel="noopener noreferrer">
-              <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+            <a href="https://github.com/Gyan-Ranjan-01/RepoMind" class="btn btn-secondary"
+              style="justify-content: center; width: 100%;" target="_blank" rel="noopener noreferrer">
+              <svg class="icon" style="margin-right: 0.375rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                stroke-linecap="round" stroke-linejoin="round">
+                <path
+                  d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                <path d="M9 18c-4.51 2-5-2-7-2" />
+              </svg>
               View Source
             </a>
-            <a href="https://repomind-eta.vercel.app/" class="btn btn-primary" style="justify-content: center; width: 100%;" target="_blank" rel="noopener noreferrer">
+            <a href="https://repomind-eta.vercel.app/" class="btn btn-primary"
+              style="justify-content: center; width: 100%;" target="_blank" rel="noopener noreferrer">
               Try Live Demo
-              <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 7h10v10"/><path d="M17 7 7 17"/></svg>
+              <svg class="icon" style="margin-left: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                stroke-linejoin="round">
+                <path d="M7 7h10v10" />
+                <path d="M17 7 7 17" />
+              </svg>
             </a>
           </div>
         </div>
@@ -637,59 +807,75 @@
         <div class="section-heading reveal-on-scroll">
           <div class="section-badge">Career Timeline</div>
           <h2 class="section-title">Engineering Progression</h2>
-          <p class="section-subtitle">Chronological progression of development velocity, projects launched, and focus areas.</p>
+          <p class="section-subtitle">Chronological progression of development velocity, projects launched, and focus
+            areas.</p>
         </div>
 
         <div class="timeline-wrapper">
           <div class="timeline-line"></div>
-          
+
           <div class="timeline-item timeline-item-even reveal-on-scroll">
-            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-dot">
+              <div class="timeline-dot-core"></div>
+            </div>
             <div class="timeline-year">2024</div>
             <div class="timeline-card">
               <div class="timeline-mobile-year">2024</div>
               <h4 class="timeline-card-title">Started Programming</h4>
-              <p class="timeline-card-desc">Began with self-taught scripting, building automation engines, and developing a foundational interest in backend logic systems.</p>
+              <p class="timeline-card-desc">Began with self-taught scripting, building automation engines, and
+                developing a foundational interest in backend logic systems.</p>
             </div>
           </div>
 
           <div class="timeline-item timeline-item-odd reveal-on-scroll">
-            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-dot">
+              <div class="timeline-dot-core"></div>
+            </div>
             <div class="timeline-year">2025</div>
             <div class="timeline-card">
               <div class="timeline-mobile-year">2025</div>
               <h4 class="timeline-card-title">Built DocOnCall & Won HackSprint</h4>
-              <p class="timeline-card-desc">Entered IIEST Shibpur (IT). Built DocOnCall using Express/MongoDB. Won HackSprint Hackathon as the best first-year team.</p>
+              <p class="timeline-card-desc">Entered IIEST Shibpur (IT). Built DocOnCall using Express/MongoDB. Won
+                HackSprint Hackathon as the best first-year team.</p>
             </div>
           </div>
 
           <div class="timeline-item timeline-item-even reveal-on-scroll">
-            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-dot">
+              <div class="timeline-dot-core"></div>
+            </div>
             <div class="timeline-year">2026</div>
             <div class="timeline-card">
               <div class="timeline-mobile-year">2026</div>
               <h4 class="timeline-card-title">Built & Productionized RepoMind</h4>
-              <p class="timeline-card-desc">Architected and deployed RepoMind on AWS/Vercel using FastAPI and Qdrant. Successfully chunked and parsed repositories at scale.</p>
+              <p class="timeline-card-desc">Architected and deployed RepoMind on Vercel and Render using FastAPI and
+                Qdrant. Successfully chunked and parsed repositories at scale.</p>
             </div>
           </div>
 
           <div class="timeline-item timeline-item-odd reveal-on-scroll">
-            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-dot">
+              <div class="timeline-dot-core"></div>
+            </div>
             <div class="timeline-year">2026 (Mid)</div>
             <div class="timeline-card">
               <div class="timeline-mobile-year">2026 (Mid)</div>
               <h4 class="timeline-card-title">Learning AI Infrastructure</h4>
-              <p class="timeline-card-desc">Studying low-level GPU acceleration, pipeline evaluations, and vector database indexing benchmarks to reduce semantic search latencies.</p>
+              <p class="timeline-card-desc">Studying low-level GPU acceleration, pipeline evaluations, and vector
+                database indexing benchmarks to reduce semantic search latencies.</p>
             </div>
           </div>
 
           <div class="timeline-item timeline-item-even reveal-on-scroll">
-            <div class="timeline-dot"><div class="timeline-dot-core"></div></div>
+            <div class="timeline-dot">
+              <div class="timeline-dot-core"></div>
+            </div>
             <div class="timeline-year">Present</div>
             <div class="timeline-card">
               <div class="timeline-mobile-year">Present</div>
               <h4 class="timeline-card-title">Building New Products</h4>
-              <p class="timeline-card-desc">Developing next-generation developer tooling, RAG optimizations, and searching for AI/Backend Engineering internships.</p>
+              <p class="timeline-card-desc">Developing next-generation developer tooling, RAG optimizations, and
+                searching for AI/Backend Engineering internships.</p>
             </div>
           </div>
 
@@ -709,15 +895,25 @@
         <div class="about-grid">
           <div class="about-left reveal-on-scroll">
             <div class="about-story">
-              <p>I focus on building production-ready AI applications, backend architectures, and developer tools rather than just completing tutorial projects.</p>
-              <p>My work combines large language models, syntax-aware database retrieval, and asynchronous task execution into tools that improve software delivery and developer speeds. Long term, I aim to design software infrastructure that genuinely matters.</p>
+              <p>I focus on building production-ready AI applications, backend architectures, and developer tools rather
+                than just completing tutorial projects.</p>
+              <p>My work combines large language models, syntax-aware database retrieval, and asynchronous task
+                execution into tools that improve software delivery and developer speeds. Long term, I aim to design
+                software infrastructure that genuinely matters.</p>
             </div>
-            
+
             <div class="academic-panel">
-              <svg class="icon" style="color: var(--accent); flex-shrink: 0; margin-top: 0.125rem;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 17 10 11 4 5"/><line x1="12" x2="20" y1="19" y2="19"/></svg>
+              <svg class="icon" style="color: var(--accent); flex-shrink: 0; margin-top: 0.125rem;"
+                xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                <polyline points="4 17 10 11 4 5" />
+                <line x1="12" x2="20" y1="19" y2="19" />
+              </svg>
               <div>
                 <h4 class="academic-title">Academic Foundation</h4>
-                <p class="academic-desc">Pursuing B.Tech in Information Technology at <strong>Indian Institute of Engineering Science and Technology (IIEST), Shibpur</strong>. Current CGPA: <strong>9.22+</strong> (Expected Graduation: 2029).</p>
+                <p class="academic-desc">Pursuing B.Tech in Information Technology at <strong>Indian Institute of
+                    Engineering Science and Technology (IIEST), Shibpur</strong>. Current CGPA: <strong>9.22+</strong>
+                  (Expected Graduation: 2029).</p>
               </div>
             </div>
           </div>
@@ -727,19 +923,39 @@
               <h4 class="approach-title">My Approach to Code</h4>
               <ul class="approach-list">
                 <li class="approach-list-item">
-                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
                   <span>Builds complete end-to-end AI applications.</span>
                 </li>
                 <li class="approach-list-item">
-                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
                   <span>Deploys projects instead of leaving them unfinished.</span>
                 </li>
                 <li class="approach-list-item">
-                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
                   <span>Enjoys understanding backend architecture and production systems.</span>
                 </li>
                 <li class="approach-list-item">
-                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m9 12 2 2 4-4"/></svg>
+                  <svg class="icon approach-check" xmlns="http://www.w3.org/2000/svg" width="14" height="14"
+                    viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <circle cx="12" cy="12" r="10" />
+                    <path d="m9 12 2 2 4-4" />
+                  </svg>
                   <span>Focuses on solving real problems instead of cloning existing products.</span>
                 </li>
               </ul>
@@ -768,7 +984,8 @@
         <div class="section-heading reveal-on-scroll">
           <div class="section-badge">Philosophy</div>
           <h2 class="section-title">Engineering Principles</h2>
-          <p class="section-subtitle">Simple guidelines I follow when designing, writing, and refactoring codebase systems.</p>
+          <p class="section-subtitle">Simple guidelines I follow when designing, writing, and refactoring codebase
+            systems.</p>
         </div>
 
         <div class="principles-grid">
@@ -776,25 +993,29 @@
           <div class="principles-card reveal-on-scroll">
             <div class="principles-index">01</div>
             <h3 class="principles-title">Build before optimizing</h3>
-            <p class="principles-desc">Get it working, understand the bounds, then optimize bottlenecks based on real data rather than assumptions.</p>
+            <p class="principles-desc">Get it working, understand the bounds, then optimize bottlenecks based on real
+              data rather than assumptions.</p>
           </div>
           <!-- Card 2 -->
           <div class="principles-card reveal-on-scroll delay-100">
             <div class="principles-index">02</div>
             <h3 class="principles-title">Simple > Clever</h3>
-            <p class="principles-desc">Write readable, maintainable code. Over-engineering creates complexity debt that slows down development.</p>
+            <p class="principles-desc">Write readable, maintainable code. Over-engineering creates complexity debt that
+              slows down development.</p>
           </div>
           <!-- Card 3 -->
           <div class="principles-card reveal-on-scroll delay-200">
             <div class="principles-index">03</div>
             <h3 class="principles-title">Ship > Perfect</h3>
-            <p class="principles-desc">Working software in production provides feedback. Polishing in isolation delays discovery of real issues.</p>
+            <p class="principles-desc">Working software in production provides feedback. Polishing in isolation delays
+              discovery of real issues.</p>
           </div>
           <!-- Card 4 -->
           <div class="principles-card reveal-on-scroll delay-300">
             <div class="principles-index">04</div>
             <h3 class="principles-title">Solve real problems</h3>
-            <p class="principles-desc">Focus on building tools that address actual user needs or engineering friction, rather than cloning existing tutorials.</p>
+            <p class="principles-desc">Focus on building tools that address actual user needs or engineering friction,
+              rather than cloning existing tutorials.</p>
           </div>
         </div>
       </div>
@@ -883,7 +1104,8 @@
         <div class="section-heading reveal-on-scroll">
           <div class="section-badge">Secondary Projects</div>
           <h2 class="section-title">Other Software Applications</h2>
-          <p class="section-subtitle">Additional experiments, models, and prototypes built to explore specific algorithms or frameworks.</p>
+          <p class="section-subtitle">Additional experiments, models, and prototypes built to explore specific
+            algorithms or frameworks.</p>
         </div>
 
         <div class="other-projects-grid">
@@ -893,7 +1115,8 @@
               <h3 class="other-project-title">Plant Disease Classifier</h3>
               <span class="other-project-status">Completed</span>
             </div>
-            <p class="other-project-desc">Deep learning application using PyTorch to analyze crop leaves and diagnose plant diseases. Accelerates farm inspection by automating disease identification.</p>
+            <p class="other-project-desc">Deep learning application using PyTorch to analyze crop leaves and diagnose
+              plant diseases. Accelerates farm inspection by automating disease identification.</p>
             <div class="other-project-tags">
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Python</span>
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">PyTorch</span>
@@ -901,8 +1124,15 @@
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Computer Vision</span>
             </div>
             <div class="other-project-links">
-              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                  height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
                 Source Code
               </a>
             </div>
@@ -914,7 +1144,8 @@
               <h3 class="other-project-title">Anime Recommendation System</h3>
               <span class="other-project-status">Completed</span>
             </div>
-            <p class="other-project-desc">Collaborative and content-based recommendation system that suggests media matches based on user watch histories and ratings metadata.</p>
+            <p class="other-project-desc">Collaborative and content-based recommendation system that suggests media
+              matches based on user watch histories and ratings metadata.</p>
             <div class="other-project-tags">
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Python</span>
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Scikit-Learn</span>
@@ -922,8 +1153,15 @@
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Streamlit</span>
             </div>
             <div class="other-project-links">
-              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                  height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
                 Source Code
               </a>
             </div>
@@ -935,7 +1173,8 @@
               <h3 class="other-project-title">Bengaluru House Price Prediction</h3>
               <span class="other-project-status">Completed</span>
             </div>
-            <p class="other-project-desc">Machine learning regression model trained on location, sizing, and amenities data to predict property prices in Bengaluru.</p>
+            <p class="other-project-desc">Machine learning regression model trained on location, sizing, and amenities
+              data to predict property prices in Bengaluru.</p>
             <div class="other-project-tags">
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Python</span>
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Scikit-Learn</span>
@@ -943,8 +1182,15 @@
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Flask</span>
             </div>
             <div class="other-project-links">
-              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                  height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
                 Source Code
               </a>
             </div>
@@ -956,7 +1202,8 @@
               <h3 class="other-project-title">SweetSuite Property Platform</h3>
               <span class="other-project-status">Completed</span>
             </div>
-            <p class="other-project-desc">Full-stack real estate dashboard and property management platform facilitating bookings and rentals.</p>
+            <p class="other-project-desc">Full-stack real estate dashboard and property management platform facilitating
+              bookings and rentals.</p>
             <div class="other-project-tags">
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">React</span>
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">Node.js</span>
@@ -964,8 +1211,15 @@
               <span class="badge" style="font-size: 10px; padding: 0.1rem 0.4rem;">MongoDB</span>
             </div>
             <div class="other-project-links">
-              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-link" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" style="margin-right: 0.25rem;" xmlns="http://www.w3.org/2000/svg" width="14"
+                  height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                  stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
                 Source Code
               </a>
             </div>
@@ -979,31 +1233,56 @@
       <div class="container">
         <div class="contact-container reveal-on-scroll">
           <span class="contact-badge">Get In Touch</span>
-          <h2 class="contact-title">Interested in AI Infrastructure, Backend Engineering, Developer Tools, or Startup Collaboration?</h2>
-          <p class="contact-desc">Let's build something meaningful. I am seeking software engineering internships where I can contribute to backend frameworks and GPU routing layers.</p>
-          
+          <h2 class="contact-title">Interested in AI Infrastructure, Backend Engineering, Developer Tools, or Startup
+            Collaboration?</h2>
+          <p class="contact-desc">Let's build something meaningful. I am seeking software engineering internships where
+            I can contribute to backend frameworks and GPU routing layers.</p>
+
           <div class="contact-buttons">
             <div class="contact-btn-wrapper">
               <a href="mailto:gyanranjan01.contact@gmail.com" class="btn btn-primary">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect width="20" height="16" x="2" y="4" rx="2" />
+                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+                </svg>
                 Email
               </a>
             </div>
             <div class="contact-btn-wrapper">
-              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/><path d="M9 18c-4.51 2-5-2-7-2"/></svg>
+              <a href="https://github.com/Gyan-Ranjan-01" class="btn btn-secondary" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path
+                    d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4" />
+                  <path d="M9 18c-4.51 2-5-2-7-2" />
+                </svg>
                 GitHub
               </a>
             </div>
             <div class="contact-btn-wrapper">
-              <a href="https://linkedin.com/in/gyan-ranjan" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+              <a href="https://linkedin.com/in/gyan-ranjan" class="btn btn-secondary" target="_blank"
+                rel="noopener noreferrer">
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                  <rect width="4" height="12" x="2" y="9" />
+                  <circle cx="4" cy="4" r="2" />
+                </svg>
                 LinkedIn
               </a>
             </div>
             <div class="contact-btn-wrapper">
               <a href="resume.pdf" class="btn btn-secondary" target="_blank" rel="noopener noreferrer">
-                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z"/><path d="M14 2v4a2 2 0 0 0 2 2h4"/><path d="M10 9H8"/><path d="M16 13H8"/><path d="M16 17H8"/></svg>
+                <svg class="icon" xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M15 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7Z" />
+                  <path d="M14 2v4a2 2 0 0 0 2 2h4" />
+                  <path d="M10 9H8" />
+                  <path d="M16 13H8" />
+                  <path d="M16 17H8" />
+                </svg>
                 Resume
               </a>
             </div>
@@ -1031,8 +1310,13 @@
   <div id="cmd-palette" class="cmd-palette" aria-hidden="true" role="dialog" aria-label="Command Menu">
     <div class="cmd-palette-content">
       <div class="cmd-palette-search">
-        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
-        <input type="text" id="cmd-search-input" placeholder="Type a command (e.g. 'work', 'resume', 'github')..." autocomplete="off" aria-label="Search commands">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none"
+          stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon">
+          <circle cx="11" cy="11" r="8" />
+          <path d="m21 21-4.3-4.3" />
+        </svg>
+        <input type="text" id="cmd-search-input" placeholder="Type a command (e.g. 'work', 'resume', 'github')..."
+          autocomplete="off" aria-label="Search commands">
       </div>
       <div class="cmd-palette-list" id="cmd-options-list" role="listbox">
         <!-- Renders Dynamically via script.js -->
@@ -1047,4 +1331,5 @@
 
   <script src="script.js"></script>
 </body>
+
 </html>
