@@ -1710,10 +1710,22 @@ table.decision-table tr:hover {
   color: #166534;
 }
 
+.other-project-status.in-progress {
+  background-color: #fef9c3;
+  border: 1px solid #fef08a;
+  color: #854d0e;
+}
+
 .dark .other-project-status {
   background-color: #064e3b;
   border-color: #047857;
   color: #a7f3d0;
+}
+
+.dark .other-project-status.in-progress {
+  background-color: #713f12;
+  border-color: #a16207;
+  color: #fef08a;
 }
 
 .other-project-desc {
