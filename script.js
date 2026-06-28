@@ -173,25 +173,24 @@ document.addEventListener('DOMContentLoaded', () => {
           content.style.paddingBottom = '';
         }, 200);
       } else {
-        // Expanding
+        // Expanding — measure natural height BEFORE zeroing
         el.setAttribute('open', '');
-        const targetHeight = content.offsetHeight;
-        
+        const naturalHeight = content.scrollHeight;
+
         content.style.height = '0px';
         content.style.opacity = '0';
-        content.style.paddingTop = '0px';
-        content.style.paddingBottom = '0px';
-        content.offsetHeight; // Trigger reflow
-        
-        content.style.height = `${targetHeight}px`;
+        content.style.overflow = 'hidden';
+        content.offsetHeight; // Force reflow
+
+        content.style.transition = 'height 0.2s ease, opacity 0.2s ease';
+        content.style.height = `${naturalHeight}px`;
         content.style.opacity = '1';
-        content.style.paddingTop = '';
-        content.style.paddingBottom = '';
-        
+
         setTimeout(() => {
           content.style.height = '';
-          content.style.opacity = '';
-        }, 200);
+          content.style.overflow = '';
+          content.style.transition = '';
+        }, 220);
       }
     });
   });
@@ -361,6 +360,8 @@ document.addEventListener('DOMContentLoaded', () => {
     } else if (e.key === 'Escape') {
       e.preventDefault();
       closeCommandPalette();
+    } else if (e.key === 'Tab') {
+      e.preventDefault();
     }
   });
 

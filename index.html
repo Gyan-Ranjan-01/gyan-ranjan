@@ -188,10 +188,6 @@
               <span class="stats-card-lbl">Current CGPA</span>
             </div>
             <div class="stats-card">
-              <span class="stats-card-val">Pupil</span>
-              <span class="stats-card-lbl">Codeforces Rating</span>
-            </div>
-            <div class="stats-card">
               <span class="stats-card-val">300+</span>
               <span class="stats-card-lbl">DSA Solved</span>
             </div>
@@ -268,28 +264,27 @@
                   </div>
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-solution">The Solution</div>
-                    <p class="ps-desc">An AST-aware RAG platform. Chunks files by scope boundaries, embeds blocks in
-                      Qdrant, and runs multi-query context assembly for precise architectural answers.</p>
+                    <p class="ps-desc">A semantic chunk-based RAG platform. Splits files into context-preserving chunks, embeds them in Qdrant via Gemini embeddings, and runs multi-query expansion for precise architectural answers.</p>
                   </div>
                 </div>
 
                 <!-- Engineering Metrics Grid -->
                 <div class="metrics-grid">
                   <div class="metric-chip">
-                    <span class="metric-val">100K+ LoC</span>
-                    <span class="metric-lbl">Repo scale indexed</span>
+                    <span class="metric-val">Multi-Query</span>
+                    <span class="metric-lbl">RAG expansion via LangChain</span>
                   </div>
                   <div class="metric-chip">
-                    <span class="metric-val">&lt;500ms</span>
-                    <span class="metric-lbl">Query lookup time</span>
+                    <span class="metric-val">Qdrant</span>
+                    <span class="metric-lbl">Vector similarity search</span>
                   </div>
                   <div class="metric-chip">
-                    <span class="metric-val">20,000+</span>
-                    <span class="metric-lbl">Chunks managed</span>
+                    <span class="metric-val">OAuth 2.0</span>
+                    <span class="metric-lbl">Google auth + JWT sessions</span>
                   </div>
                   <div class="metric-chip">
                     <span class="metric-val">Async</span>
-                    <span class="metric-lbl">Ingestion pipeline</span>
+                    <span class="metric-lbl">FastAPI ingestion pipeline</span>
                   </div>
                 </div>
               </div>
@@ -567,8 +562,7 @@
             <!-- Case Study layout Grid -->
             <div class="case-study-grid">
               <div class="case-study-left">
-                <p class="case-study-desc">DocOnCall is an intelligent medical companion that bridges patient symptoms,
-                  medical report files, and doctor routing.</p>
+                <p class="case-study-desc">DocOnCall is a full-stack medical assistant platform that handles symptom-based AI chat, PDF report analysis, and keyword-driven specialist doctor recommendations.</p>
 
                 <div class="problem-solution-cards">
                   <div class="ps-card">
@@ -578,28 +572,27 @@
                   </div>
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-solution">The Solution</div>
-                    <p class="ps-desc">An MVC platform using Llama-3 (Groq) for fast symptom chats (<100ms) and Gemini
-                        to parse reports, routing patient profiles to clinics.</p>
+                    <p class="ps-desc">An MVC Express platform using Gemini (primary) + Groq LLaMA-3 (fallback) for AI chat, Gemini Vision for PDF report parsing, and symptom keyword matching to route patients to specialist doctors.</p>
                   </div>
                 </div>
 
                 <!-- Engineering Metrics Grid -->
                 <div class="metrics-grid">
                   <div class="metric-chip">
-                    <span class="metric-val">&lt;100ms</span>
-                    <span class="metric-lbl">Chat latency (Groq)</span>
+                    <span class="metric-val">11 Models</span>
+                    <span class="metric-lbl">Gemini + Groq fallback chain</span>
                   </div>
                   <div class="metric-chip">
-                    <span class="metric-val">Structured JSON</span>
-                    <span class="metric-lbl">Report parsing (Gemini)</span>
+                    <span class="metric-val">Dual Portal</span>
+                    <span class="metric-lbl">Patient & Doctor dashboards</span>
                   </div>
                   <div class="metric-chip">
                     <span class="metric-val">MVC Pattern</span>
-                    <span class="metric-lbl">Core Architecture</span>
+                    <span class="metric-lbl">Express + EJS architecture</span>
                   </div>
                   <div class="metric-chip">
-                    <span class="metric-val">Polymorphic</span>
-                    <span class="metric-lbl">Document Database</span>
+                    <span class="metric-val">Keyword AI</span>
+                    <span class="metric-lbl">Symptom → specialist routing</span>
                   </div>
                 </div>
               </div>
@@ -678,8 +671,8 @@
                           Symptom reporting forms & report uploads
                         </div>
                         <div class="diagram-node" style="margin-top: 1rem;">
-                          <span class="diagram-node-title">🔑 JWT Security</span>
-                          Secure session tokens
+                          <span class="diagram-node-title">🔐 Session Auth</span>
+                          express-session with httpOnly cookies
                         </div>
                       </div>
                       <div style="display: flex; flex-direction: column; gap: 1rem;">
@@ -1236,7 +1229,7 @@
           <h2 class="contact-title">Interested in AI Infrastructure, Backend Engineering, Developer Tools, or Startup
             Collaboration?</h2>
           <p class="contact-desc">Let's build something meaningful. I am seeking software engineering internships where
-            I can contribute to backend frameworks and GPU routing layers.</p>
+            I can contribute to AI infrastructure, backend systems, and developer tooling.</p>
 
           <div class="contact-buttons">
             <div class="contact-btn-wrapper">

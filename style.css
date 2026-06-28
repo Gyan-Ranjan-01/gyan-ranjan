@@ -106,6 +106,14 @@ section {
   background-color: var(--card);
 }
 
+.scroll-mt-12 {
+  scroll-margin-top: 5rem;
+}
+
+.scroll-mt-16 {
+  scroll-margin-top: 4rem;
+}
+
 /* Grid helper utilities */
 .grid {
   display: grid;
@@ -357,19 +365,22 @@ header.scrolled {
   background-color: var(--background);
   border-bottom: 1px solid var(--border);
   box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
-  display: none;
+  display: flex;
   flex-direction: column;
   padding: 1.5rem;
   gap: 1rem;
   transform: translateY(-10px);
   opacity: 0;
-  transition: transform 0.2s ease, opacity 0.2s ease;
+  visibility: hidden;
+  pointer-events: none;
+  transition: transform 0.2s ease, opacity 0.2s ease, visibility 0.2s ease;
 }
 
 .mobile-nav-panel.open {
-  display: flex;
   transform: translateY(0);
   opacity: 1;
+  visibility: visible;
+  pointer-events: all;
 }
 
 .mobile-nav-link {
@@ -478,14 +489,26 @@ header.scrolled {
 
 .hero-stats-block {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 1rem;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
   width: 100%;
+}
+
+@media (min-width: 640px) {
+  .hero-stats-block {
+    grid-template-columns: repeat(3, 1fr);
+  }
 }
 
 @media (min-width: 768px) {
   .hero-stats-block {
     grid-column: span 5;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    padding-top: 1rem;
+  }
+  .hero-stats-block .stats-card {
+    padding: 1rem;
   }
 }
 
