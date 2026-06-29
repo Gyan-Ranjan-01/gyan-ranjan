@@ -2,7 +2,7 @@
 
 A premium, high-performance, and minimal engineering portfolio showcasing selected AI, backend infrastructure, and developer tool projects.
 
-Live Demo: [gyanranjan.dev](https://gyanranjan.dev)
+Live Demo: [gyan-ranjan.vercel.app](https://gyan-ranjan.vercel.app/)
 
 ---
 
