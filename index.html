@@ -365,7 +365,8 @@
                       <div class="diagram-conn-column">
                         <div class="diagram-node diagram-node-accent" style="width: 100%;">
                           <span class="diagram-node-title diagram-node-accent-title">⚡ FastAPI Core</span>
-                          * Custom AST Chunker<br>
+                          * Language-aware chunker using LangChain's from_language splitter; falls back to \n\n / \n
+                          delimiters for unrecognised file types.<br>
                           * Query expansion handler
                         </div>
                         <div class="diagram-line-vert"></div>
@@ -418,23 +419,23 @@
                         </thead>
                         <tbody>
                           <tr>
-                            <td class="decision-tech-name">AI Backend Engine</td>
-                            <td><span class="decision-choice-badge">FastAPI (Python)</span></td>
-                            <td class="decision-alternatives">Node.js, Go</td>
-                            <td>
+                            <td class="decision-tech-name" data-label="Decision">AI Backend Engine</td>
+                            <td data-label="Chosen Tech"><span class="decision-choice-badge">FastAPI (Python)</span></td>
+                            <td class="decision-alternatives" data-label="Alternatives">Node.js, Go</td>
+                            <td data-label="Trade-offs & Rationale">
                               <div class="decision-details-p"><strong>Trade-off:</strong> Higher container memory
                                 overhead than Go, but provides native integrations.</div>
                               <div class="decision-details-p"><strong>Benefits:</strong> Rapid interoperability with
                                 Python ML tooling (LangChain, Hugging Face, NumPy).</div>
-                              <div class="decision-details-p"><strong>Limitations:</strong> Thread blocking during
-                                massive parser jobs; handled via Celery task delegation.</div>
+                              <div class="decision-details-p"><strong>Limitations:</strong> Thread blocking during large
+                                repo parsing; mitigated via timed wait intervals between embedding calls.</div>
                             </td>
                           </tr>
                           <tr>
-                            <td class="decision-tech-name">Vector Database</td>
-                            <td><span class="decision-choice-badge">Qdrant</span></td>
-                            <td class="decision-alternatives">FAISS, Pgvector</td>
-                            <td>
+                            <td class="decision-tech-name" data-label="Decision">Vector Database</td>
+                            <td data-label="Chosen Tech"><span class="decision-choice-badge">Qdrant</span></td>
+                            <td class="decision-alternatives" data-label="Alternatives">FAISS, Pgvector</td>
+                            <td data-label="Trade-offs & Rationale">
                               <div class="decision-details-p"><strong>Trade-off:</strong> Lacks SQL flexibility of
                                 Pgvector, but runs faster out-of-the-box.</div>
                               <div class="decision-details-p"><strong>Benefits:</strong> Native payload metadata
@@ -444,16 +445,16 @@
                             </td>
                           </tr>
                           <tr>
-                            <td class="decision-tech-name">Embeddings & Inference</td>
-                            <td><span class="decision-choice-badge">Gemini 1.5 Flash</span></td>
-                            <td class="decision-alternatives">GPT-4o, Claude 3.5</td>
-                            <td>
+                            <td class="decision-tech-name" data-label="Decision">Embeddings & Inference</td>
+                            <td data-label="Chosen Tech"><span class="decision-choice-badge">Gemini 1.5 Flash</span></td>
+                            <td class="decision-alternatives" data-label="Alternatives">GPT-4o, Claude 3.5</td>
+                            <td data-label="Trade-offs & Rationale">
                               <div class="decision-details-p"><strong>Trade-off:</strong> Easing logic slightly behind
                                 Claude 3.5, but offers massive 1M+ token context windows.</div>
                               <div class="decision-details-p"><strong>Benefits:</strong> Drastically cheaper token
                                 processing for files indexing.</div>
                               <div class="decision-details-p"><strong>Limitations:</strong> Dynamic rate limits; managed
-                                with exponential client backoffs.</div>
+                                with rate limits with wait intervals between embedding calls.</div>
                             </td>
                           </tr>
                         </tbody>
@@ -497,8 +498,9 @@
                 <div class="accordion-content">
                   <div class="challenges-grid" style="grid-template-columns: 1fr;">
                     <div class="challenge-card" style="border: none; padding: 0;">
-                      <p class="challenge-card-desc">RAG quality depends on chunk preparation and structural metadata
-                        rather than raw LLM parameters. Syntax-aware databases improve relevance by 40%.</p>
+                      <p class="challenge-card-desc">RAG quality depends heavily on how chunks are prepared — splitting
+                        by language structure preserves context better than fixed-size splits. Chunk boundaries matter
+                        more than LLM parameter tuning.</p>
                     </div>
                   </div>
                 </div>
@@ -586,17 +588,17 @@
                   </div>
                   <div class="ps-card">
                     <div class="ps-badge ps-badge-solution">The Solution</div>
-                    <p class="ps-desc">An MVC Express platform using Gemini (primary) + Groq LLaMA-3 (fallback) for AI
-                      chat, Gemini Vision for PDF report parsing, and symptom keyword matching to route patients to
-                      specialist doctors.</p>
+                    <p class="ps-desc">An MVC Express platform with a 3-model priority fallback chain — Gemini 2.5 Flash
+                      → Flash Lite → Groq LLaMA 3.3 70B. Auto-routes on quota exhaustion or rate limits. Uses Gemini
+                      Vision for PDF parsing and symptom keyword matching for specialist routing.</p>
                   </div>
                 </div>
 
                 <!-- Engineering Metrics Grid -->
                 <div class="metrics-grid">
                   <div class="metric-chip">
-                    <span class="metric-val">11 Models</span>
-                    <span class="metric-lbl">Gemini + Groq fallback chain</span>
+                    <span class="metric-val">3-Model Fallback</span>
+                    <span class="metric-lbl">Gemini 2.5 Flash → Flash Lite → Groq LLaMA 3.3</span>
                   </div>
                   <div class="metric-chip">
                     <span class="metric-val">Dual Portal</span>
@@ -704,11 +706,12 @@
                       <div style="display: flex; flex-direction: column; gap: 1rem;">
                         <div class="diagram-node">
                           <span class="diagram-node-title">🍃 MongoDB</span>
-                          Stores chat records and profiles
+                          Stores patient profiles (health data, blood group, critical conditions) and doctor records
+                          (specialization, credentials, availability)
                         </div>
                         <div class="diagram-node">
-                          <span class="diagram-node-title">🧠 Groq / Gemini</span>
-                          LLM processing (Llama-3 & Gemini APIs)
+                          <span class="diagram-node-title">🧠 LLM Fallback Chain</span>
+                          Gemini 2.5 Flash → Flash Lite → Groq LLaMA 3.3 70B
                         </div>
                       </div>
                     </div>
@@ -779,8 +782,8 @@
               <p><strong>Latest Update:</strong> Refactored monolithic main.py into a modular FastAPI architecture
                 (config, database, routes, helpers) and implemented AST-aware chunking — parsing Python files into
                 semantically meaningful units instead of fixed-size text splits.</p>
-              <p><strong>Next Milestone:</strong> Implement parallel indexing workers using Celery and Redis to speed up
-                massive repository parsing.</p>
+              <p><strong>Next Milestone:</strong> Implement parallel indexing using async workers to speed up large
+                repository parsing.</p>
             </div>
           </div>
 
@@ -817,7 +820,8 @@
         <div class="section-heading reveal-on-scroll">
           <div class="section-badge">Career Timeline</div>
           <h2 class="section-title">Engineering Progression</h2>
-          <p class="section-subtitle">Chronological progression of development velocity, projects launched, and focus areas.</p>
+          <p class="section-subtitle">Chronological progression of development velocity, projects launched, and focus
+            areas.</p>
         </div>
 
         <div class="timeline-wrapper">
@@ -830,8 +834,8 @@
             </div>
             <div class="timeline-card">
               <h4 class="timeline-card-title">Began My Programming Journey</h4>
-              <p class="timeline-card-desc">Began with self-taught scripting, building automation engines, and
-                developing a foundational interest in backend logic systems.</p>
+              <p class="timeline-card-desc">Started B.Tech IT at IIEST Shibpur. Began competitive programming on
+                Codeforces and built foundational Python, frontend and backend skills.</p>
             </div>
           </div>
 
@@ -860,9 +864,9 @@
           </div>
 
 
-            </div>
-          </div>
         </div>
+      </div>
+      </div>
       </div>
     </section>
 
@@ -880,7 +884,7 @@
             <div class="about-story">
               <p>I focus on building production-ready AI applications, backend architectures, and developer tools rather
                 than just completing tutorial projects.</p>
-              <p>My work combines large language models, syntax-aware database retrieval, and asynchronous task
+              <p>My work combines large language models, language-aware chunk retrieval, and asynchronous task
                 execution into tools that improve software delivery and developer speeds. Long term, I aim to design
                 software infrastructure that genuinely matters.</p>
             </div>
