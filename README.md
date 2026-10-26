@@ -1,6 +1,10 @@
-# Gyan Ranjan | AI & Backend Engineer Portfolio
+# Gyan Ranjan | Three-Experience Engineering Portfolio
 
-A premium, high-performance, and minimal engineering portfolio showcasing selected AI, backend infrastructure, and developer tool projects.
+A high-performance, cinematic personal website offering **three distinct visitor lenses** on the same underlying engineering foundation:
+
+1. **💼 Recruiter Mode** — A clean, evidence-driven, professional presentation designed for a 30–60 second hiring assessment (Light theme by default with dark theme toggle; zero anime in content).
+2. **⚡ Developer Mode** — An interactive technical deep dive into system architecture, AST parsers, vector similarity search in Qdrant, resilient LLM fallback chains, and real trade-offs.
+3. **✨ Know Gyan** — An atmospheric, cinematic journey through personal engineering mindset, milestones, and vision, enriched by consistent character artwork.
 
 Live Demo: [gyan-ranjan.vercel.app](https://gyan-ranjan.vercel.app/)
 
@@ -8,40 +12,42 @@ Live Demo: [gyan-ranjan.vercel.app](https://gyan-ranjan.vercel.app/)
 
 ## 🚀 Key Features
 
-- **Performance-First Design**: Built with pure static HTML5, CSS3, and Vanilla JavaScript. No heavy frameworks, hydration overhead, or runtime bundler requirements.
-- **Interactive Command Palette (`Ctrl + K` / `Cmd + K`)**: Keyboard-navigable quick actions menu to browse work, jump sections, view social profiles, and download the resume.
-- **Dynamic Dark/Light Themes**: Harmonic color schemas linked with `localStorage` persistence and automatic system theme detection.
-- **Smooth Content Transitions**: Hardware-accelerated sliding screenshot carousels and smooth accordion expand states for trade-off matrices and blueprint diagrams.
-- **Search Optimization (SEO)**: Statically configured `sitemap.xml`, crawl-friendly `robots.txt`, and semantic HTML headings.
+- **Visitor Selection Screen ("How Would You Like to Know Me?")**: Fullscreen entry experience with interactive cards for Recruiter, Developer, and Know Gyan modes, complete with skip controls.
+- **Persistent Segmented Lens Switcher**: Seamlessly switch between all three experiences at any time from the sticky navigation bar or footer.
+- **Dual-Theme Recruiter Mode**: Light theme by default for maximum executive readability, with a sun/moon toggle for dark theme. Strictly professional with verified metrics (9.22 CGPA, 300+ DSA, HackSprint Winner).
+- **Interactive Developer Rails & Blueprints**: Horizontal project catalogue with category filtering, screenshot carousels for RepoMind and DocOnCall, architecture pipeline diagrams, and trade-off comparison tables.
+- **Storytelling Narrative in Know Gyan**: Apple-style visual pacing featuring custom-generated anime character artwork matching the visual concept sheet (hero portrait, dusk city skyline, and starry night epilogue).
+- **Interactive Command Palette (`Ctrl + K` / `Cmd + K`)**: Keyboard-navigable quick actions menu to switch modes, search projects, download the resume, or view social profiles.
+- **Zero Framework Hydration Overhead**: Built with pure semantic HTML5, modern CSS3, and Vanilla JavaScript for instant page loads.
 
 ---
 
 ## 🛠️ Tech Stack & Domain Expertise
 
-- **Languages**: Python, Node.js, JavaScript, HTML5/CSS3, SQL, NoSQL.
-- **AI & Data Engineering**: LLM priority chains (Gemini 2.5 Flash, Groq LLaMA 3.3), Vector DBs (Qdrant), RAG context assembly, LangChain.
-- **Backend & Tooling**: FastAPI, Express.js, MongoDB, RESTful APIs, Git, Docker.
+- **AI & RAG Infrastructure**: LangChain, Qdrant Vector DB, Gemini 1.5 Flash / 2.5 Flash, Groq LLaMA 3.3 70B, AST Language Splitters.
+- **Backend & APIs**: FastAPI (Async Python), Node.js, Express.js, MongoDB, RESTful Architecture, OAuth 2.0 / JWT, Docker.
+- **Frontend & Systems**: Vanilla ES6+ JavaScript, CSS3 Design Tokens, Git, Vercel, Render, Hugging Face Spaces.
 
 ---
 
 ## 💻 Local Development
 
-Since the site is static, it does not require a compilation step. You can run it locally with any simple HTTP server. 
-
-Launch a local development server using Python:
+Run the website locally with any static HTTP server:
 
 ```bash
-# Start server in the project root directory
+# Python 3
 python -m http.server 8000
 ```
 
-Once running, navigate to `http://localhost:8000` in your web browser.
+Navigate to `http://localhost:8000` in your web browser.
 
 ---
 
 ## 📁 Repository Structure
 
-- `index.html` — Main layout, semantic document structure, and content pages.
-- `style.css` — Responsive design tokens, typography, colors, animations, and custom layout utilities.
-- `script.js` — Client-side theme management, command palette modal logic, slider carousels, and viewport scroll reveals.
-- `robots.txt` & `sitemap.xml` — SEO crawling configurations.
+- `index.html` — The unified semantic markup housing the Entry Selector, Recruiter view, Developer view, Know Gyan view, and Command Palette.
+- `style.css` — Modular design system with theme variables, glassmorphic headers, horizontal rails, and responsive layouts.
+- `script.js` — Client-side runtime managing experience modes, theme toggles, carousels, category filtering, and the command palette.
+- `images/anime/` — Coordinated male anime character artwork assets (`hero_portrait.jpg`, `about_city.jpg`, `dev_coding.jpg`, `closing_night.jpg`, and selector cards).
+- `images/repomind/` & `images/doconcall/` — Production project screenshots.
+- `resume.pdf` — Downloadable resume.

@@ -46,3 +46,8 @@ falsy.txt
 # local images & backups
 images/avatar.png
 assets/
+/screenshots/
+*.png
+Gyan_Ranjan_Portfolio_Complete.pdf
+images/cards/
+scratch/
